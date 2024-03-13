@@ -49,7 +49,7 @@ Library used:
 
 6-	Search engine. 
 
-7-	Settings
+7-	Settings (
   a.	Lang
   b.	Planned and ai suggestions trips.
   c.	Notification
@@ -58,12 +58,12 @@ Library used:
   f.	Third party services
   g.	Police 
   h.	Hospital
-  i.	embassy
+  i.	embassy )
   
-8-	Check list 
+8-	Check list (
   a.	Completion bar
   b.	Create task
-  c.	Al suggestions
+  c.	Al suggestions )
   
 9-	Ai chat bot*
 
