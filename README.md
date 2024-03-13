@@ -38,11 +38,17 @@ Library used:
 
 **Features**
 1-	List of popular locations
+
 2-	Map (geo location)
+
 3-	List of hotels
+
 4-	List of restaurants 
+
 5-	List of events 
+
 6-	Search engine. 
+
 7-	Settings
   a.	Lang
   b.	Planned and ai suggestions trips.
@@ -53,12 +59,16 @@ Library used:
   g.	Police 
   h.	Hospital
   i.	embassy
+  
 8-	Check list 
   a.	Completion bar
   b.	Create task
   c.	Al suggestions
+  
 9-	Ai chat bot*
+
 10-	Near by geo location (food,parks, etc list)
+
 11-	Booking functionality*
 
 **Test case**
