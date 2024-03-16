@@ -1,10 +1,11 @@
 # INFS3203-Project-Group3
+
 # Members:
-**Aasiyaa**
-**Shouq**
-**Yakub**
-**Ahmed**
-**Samuel**
+**Bibi Aasiyaa Jaulim**
+**Shouq Al-Sheeb**
+**Yakub Al Mezyad**
+**Ahmed Hussein**
+**Samuel Nisan Suresh**
 
 
 **Brief about the topic**
@@ -31,15 +32,14 @@ Al-Sheeb, Shouq, 60088665
 
 
 **Requirements**
-Program used: vc
-Language used: Flet , mern
-Library used:
+Program used: Visual Studio Code
+Language used: Python on Flet framework
 resource link: https://www.data.gov.qa/pages/default/
 
 **Features**
 1-	List of popular locations
 
-2-	Map (geo location)
+2-	Map
 
 3-	List of hotels
 
@@ -47,13 +47,13 @@ resource link: https://www.data.gov.qa/pages/default/
 
 5-	List of events 
 
-6-	Search engine. 
+6- Weather Forecast
 
 7-	Settings (
   a.	Lang
   b.	Planned and ai suggestions trips.
   c.	Notification
-  d.	Weather forecast
+  d.	
   e.	Traffic
   f.	Third party services
   g.	Police 
@@ -64,10 +64,8 @@ resource link: https://www.data.gov.qa/pages/default/
   a.	Completion bar
   b.	Create task
   c.	Al suggestions )
-  
-9-	Ai chat bot*
 
-10-	Near by geo location (food,parks, etc list)
+9-	Near by geo location (food,parks, etc list)
 
 11-	Booking functionality*
 
