@@ -5,10 +5,8 @@ from flet_core.control_event import ControlEvent
 def main(page: ft.Page):
     page.title = 'Signup'
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
-    # page.theme_mode = ft.ThemeMode.LIGHT
     # page.window_width = 400
     # page.window_height = 400
-    # page.window_resizable = False
 
     text_username: TextField = TextField(label='Username', text_align=ft.TextAlign.LEFT, width=200)
     text_password: TextField = TextField(label='Password', text_align=ft.TextAlign.LEFT, width=200, password=True)
