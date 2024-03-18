@@ -75,3 +75,6 @@ def main(page: ft.Page):
 
 # Run the app as a web app
 ft.app(target=main, view=ft.AppView.WEB_BROWSER)
+
+
+'''https://colab.research.google.com/drive/1rTVOduYZrI0nmpHz83u1jLTd-iWS_8cI#scrollTo=ouNj8Qr0Fyx_'''
