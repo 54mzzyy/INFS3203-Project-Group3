@@ -18,9 +18,9 @@ def main(page: ft.Page):
         # Perform search logic here (e.g., fetch hot spots based on search_query)
         # For simplicity, let's assume we have some predefined hot spots
         hot_spots = [
-            {'name': 'Statue of Liberty', 'latitude': 40.6892, 'longitude': -74.0445},
-            {'name': 'Eiffel Tower', 'latitude': 48.8584, 'longitude': 2.2945},
-            {'name': 'Great Wall of China', 'latitude': 40.4319, 'longitude': 116.5704},
+            {'name': 'The Pearl-Qatar', 'latitude': 25.3644, 'longitude': 51.5514},
+            {'name': 'Souq Waqif', 'latitude': 25.2843, 'longitude': 51.5225},
+            {'name': 'Katara Cultural Village', 'latitude': 25.3622, 'longitude': 51.5332},
             # Add more hot spots as needed
         ]
         # Update the map view with hot spots
