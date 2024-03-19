@@ -24,7 +24,7 @@ Heading levels 1-3 get their own paragraph, as shown. Headings 4 and 5 are run-i
 If needed, you can include consecutive paragraphs with their own headings, where appropriate. For APA Style formatting, type your own references. To correctly format a reference page according to APA Style guidelines, see page four. 
 
  
-**name	Role**
+**Name	Role**
 Al Mezyad, Yakub, 60103135	
 
 Suresh, Samuel, 60104563	
@@ -45,28 +45,21 @@ resource link: https://www.data.gov.qa/pages/default/
 
 **Features**
 1-	List of popular locations
-
 2-	Map
-
 3-	List of hotels
-
 4-	List of restaurants 
-
 5-	List of events 
-
 6- Weather Forecast
-
 7-	Settings
-  a.	Lang
-  b.	Planned and ai suggestions trips.
-  c.	Notification
-  d.	
-  e.	Traffic
-  f.	Third party services
-  g.	Police 
-  h.	Hospital
-  i.	embassy
-  j.	Check list (Completion bar, Create task)
+        a.	Language
+        b.	Planned and ai suggestions trips.
+        c.	Notification
+        d.	Traffic
+        e.	Third party services
+        f.	Police 
+        g.	Hospital
+        h.	embassy
+        i.	Check list (Completion bar, Create task)
   
 8-	Booking functionality*
 
