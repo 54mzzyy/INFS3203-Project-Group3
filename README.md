@@ -21,7 +21,7 @@ Qatar's economic growth strategy aims to diversify its income sources, and touri
 
 
 # **Project Plan**
-**Qatar Tourism Mobile App - TourQ**
+**Qatar Tourism Web App - TourQ**
 
 
 
@@ -61,7 +61,7 @@ Identify a Need: Based on the NDS goals, identify a specific societal, economic,
 
 
 
-Define App Proposal: Develop a proposal for a simple mobile app that addresses the identified need.
+Define App Proposal: Develop a proposal for a simple web app that addresses the identified need.
 
 
 
