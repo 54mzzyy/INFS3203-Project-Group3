@@ -201,7 +201,7 @@ Note: This plan prioritizes a functional Minimum Viable Product (MVP) within the
 
 **Requirements**
 Program used: Visual Studio Code
-Language used: Python on Flet framework
+Language used: NodeJS and React
 resource link: https://www.data.gov.qa/pages/default/
 
 **Features**
@@ -213,13 +213,13 @@ resource link: https://www.data.gov.qa/pages/default/
 6- Weather Forecast
 7-	Settings
         a.	Language
-        b.	Planned and ai suggestions trips.
+        b.	Planned suggestions trips.
         c.	Notification
         d.	Traffic
         e.	Third party services
         f.	Police 
         g.	Hospital
-        h.	embassy
+        h.	Embassy
         i.	Check list (Completion bar, Create task)
   
 8-	Booking functionality*
