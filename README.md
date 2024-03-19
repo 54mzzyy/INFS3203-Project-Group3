@@ -17,12 +17,11 @@
 
 
 **Brief about the topic**
-Test blah blah
+
 
 **Project Plan**
 Heading levels 1-3 get their own paragraph, as shown. Headings 4 and 5 are run-in headings used at the beginning of the paragraph. Include a period at the end of a run-in heading. Double-space all text, including headings. Use descriptive headings to help readers identify sections of your paper.
 If needed, you can include consecutive paragraphs with their own headings, where appropriate. For APA Style formatting, type your own references. To correctly format a reference page according to APA Style guidelines, see page four. 
- Roles
 
  
 **name	Role**
@@ -57,7 +56,7 @@ resource link: https://www.data.gov.qa/pages/default/
 
 6- Weather Forecast
 
-7-	Settings (
+7-	Settings
   a.	Lang
   b.	Planned and ai suggestions trips.
   c.	Notification
@@ -66,15 +65,9 @@ resource link: https://www.data.gov.qa/pages/default/
   f.	Third party services
   g.	Police 
   h.	Hospital
-  i.	embassy )
+  i.	embassy
+  j.	Check list (Completion bar, Create task)
   
-8-	Check list (
-  a.	Completion bar
-  b.	Create task
-  c.	Al suggestions )
-
-9-	Near by geo location (food,parks, etc list)
-
-11-	Booking functionality*
+8-	Booking functionality*
 
 **Test case**
