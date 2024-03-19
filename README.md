@@ -198,59 +198,34 @@ Team: Up to 4 students
 
 **Note: This plan prioritizes a functional Minimum Viable Product (MVP) within the given timeframe. Additional features and functionalities can be considered based on time availability and future development.**
 
-
-
-
-
-
-
 # **Requirements**
 - ## IDE: Visual Studio Code
-- ## Language: Javascript
-
+- ## Language: Javascript >> NodeJS, ReactJS
 
 
 # Resource(s) 
 - **Link: [Qatar Open Data](https://www.data.gov.qa/pages/default/)**
 
+
+
 # **Features**
 1. List of popular locations
-
-
-
 2. Map
-
-
-
 3. List of hotels
-
-
-
-4. List of restaurants
-
-
-
-5. List of events
-
-
-
+4. List of restaurants 
+5. List of events 
 6. Weather Forecast
-
-
-
 7. Settings
-     - Language
-     - Planned and ai suggestions trips.
-     - Notification
-     - Traffic
-     - Third-Party services
-     - Police 
-     - Hospital
-     - Embassy
-     - Check list (Completion bar, Create task)
+        a.	Language
+        b.	Planned suggestions trips.
+        c.	Notification
+        d.	Traffic
+        e.	Third party services
+        f.	Police 
+        g.	Hospital
+        h.	Embassy
+        i.	Check list (Completion bar, Create task)
 
-
-  
 8. Booking functionality*
 
 ## **End of Document**
