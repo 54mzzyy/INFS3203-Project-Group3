@@ -23,18 +23,6 @@
 Heading levels 1-3 get their own paragraph, as shown. Headings 4 and 5 are run-in headings used at the beginning of the paragraph. Include a period at the end of a run-in heading. Double-space all text, including headings. Use descriptive headings to help readers identify sections of your paper.
 If needed, you can include consecutive paragraphs with their own headings, where appropriate. For APA Style formatting, type your own references. To correctly format a reference page according to APA Style guidelines, see page four. 
 
- 
-**Name	Role**
-Al Mezyad, Yakub, 60103135	
-
-Suresh, Samuel, 60104563	
-
-Jaulim, Bibi Aasiyaa, 60102393	
-
-Hussein, Ahmed, 60102486	
-
-Al-Sheeb, Shouq, 60088665	
-
 **Timeline**
 
 
