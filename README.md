@@ -200,7 +200,8 @@ Team: Up to 4 students
 
 # **Requirements**
 - ## IDE: Visual Studio Code
-- ## Language: Javascript >> NodeJS, ReactJS
+- ## Language: Javascript >> NodeJS, ReactJS, ExpressJS
+- ## Framework: MERN [MongoDB, ExpressJS, ReactJS, NodeJS]
 
 
 # Resource(s) 
@@ -216,15 +217,15 @@ Team: Up to 4 students
 5. List of events 
 6. Weather Forecast
 7. Settings
-        a.	Language
-        b.	Planned suggestions trips.
-        c.	Notification
-        d.	Traffic
-        e.	Third party services
-        f.	Police 
-        g.	Hospital
-        h.	Embassy
-        i.	Check list (Completion bar, Create task)
+   - Language
+   - Planned trip suggestions.
+   - Notification
+   - Traffic
+   - Third-party services
+   - Police 
+   - Hospital
+   - Embassy
+   - Checklist (Completion bar, Create task)
 
 8. Booking functionality*
 
