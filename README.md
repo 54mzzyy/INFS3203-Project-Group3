@@ -25,7 +25,7 @@ Qatar's economic growth strategy aims to diversify its income sources, and touri
 
 
 
-Project Goal: Develop a mobile application that aligns with one of Qatar's NDS goals and addresses a specific societal, economic, or environmental need.
+Project Goal: Develop a web application that aligns with one of Qatar's NDS goals and addresses a specific societal, economic, or environmental need.
 
 **Timeline:**
 
