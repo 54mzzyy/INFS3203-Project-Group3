@@ -216,17 +216,17 @@ Team: Up to 4 students
 4. List of restaurants 
 5. List of events 
 6. Weather Forecast
-7. Settings
+7. Planned trip suggestions.
+8. Settings
    - Language
-   - Planned trip suggestions.
    - Notification
-   - Traffic
-   - Third-party services
+9. Booking functionality
+10. Third-party services
+11. Emergency Services
    - Police 
    - Hospital
    - Embassy
-   - Checklist (Completion bar, Create task)
-
-8. Booking functionality*
+15. Checklist (Completion bar, Create task)
+16. Traffic
 
 ## **End of Document**
