@@ -7,7 +7,13 @@ let app = express()
 app.use(bodyParser.urlencoded())
 app.use(cookieParser())
 
+// Handlebars will be replaced with react
+
 app.get('/', (req, res) => {
+  res.render('login')
+})
+
+app.post('/', (req, res) => {
   let username = req.body.username
   let password = req.body.password
   let verifiedUser = business.verifiedUser(username, password)
@@ -19,9 +25,6 @@ app.get('/', (req, res) => {
   }
 })
 
-app.post('/', (req, res) => {
-  
-})
 
 app.get('/main', (req, res) => {
   
