@@ -205,7 +205,18 @@ Team: Up to 4 students
 
 
 # Resource(s) 
-- **Link: [Qatar Open Data](https://www.data.gov.qa/pages/default/)**
+- **Source of Data: [Qatar Open Data](https://www.data.gov.qa/pages/default/)**
+- **MERN:**
+   - **[MongoDB Website](https://www.mongodb.com/languages/mern-stack-tutorial)**
+   - **[free code camp](https://www.freecodecamp.org/news/mern-stack-roadmap-what-you-need-to-know-to-build-full-stack-apps/)**
+   - **[Geeks for Geeks](https://www.geeksforgeeks.org/mern-stack/)**
+   - **[logRocket](https://blog.logrocket.com/mern-stack-tutorial/)**
+   - **[Medium](https://medium.com/@sriram.se21/step-by-step-tutorial-building-a-mern-stack-application-from-scratch-d281010715e4)**
+- **Radix UI**:
+   - **[Radix UI Website1](https://www.radix-ui.com/themes/docs/overview/getting-started)**
+   - **[Radix UI Website2](https://www.radix-ui.com/primitives/docs/overview/getting-started)**
+   - **[Make use of](https://www.makeuseof.com/react-application-radix-ui/)**
+   - **[logRocket](https://blog.logrocket.com/building-design-system-radix/)**
 
 
 
@@ -217,15 +228,15 @@ Team: Up to 4 students
 5. List of events 
 6. Weather Forecast
 7. Planned trip suggestions.
-8. Settings
+8. Settings:
    - Language
    - Notification
 9. Booking functionality
 10. Third-party services
-11. Emergency Services
-   - Police 
-   - Hospital
-   - Embassy
+11. Emergency Services:
+      - Police 
+      - Hospital
+      - Embassy
 15. Checklist (Completion bar, Create task)
 16. Traffic
 
