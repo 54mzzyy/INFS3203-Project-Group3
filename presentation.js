@@ -46,4 +46,8 @@ app.get('/settings', (req, res) => {
   
 })
 
+app.get('/logout', async (req,res) => {
+  res.redirect('/')
+})
+
 app.listen(8000, () => {console.log("App is running")})
