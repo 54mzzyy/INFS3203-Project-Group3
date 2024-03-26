@@ -31,10 +31,11 @@ app.get('/main', (req, res) => {
 })
 
 app.get('/map', (req, res) => {
+  res.render('map')
 })
 
 app.get('/map/:option', (req, res) => {
-  
+  res.render('map_food')
 })
 
 app.get('/checklist', (req, res) => {
