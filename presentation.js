@@ -8,7 +8,9 @@ let app = express()
 app.use(bodyParser.urlencoded())
 app.use(cookieParser())
 
-// Handlebars will be replaced with react
+app.set('views', __dirname + '/templates')
+app.set('view engine', 'handlebars')
+app.engine('handlebars', handlebars.engine())
 
 app.get('/', (req, res) => {
   res.render('login')
