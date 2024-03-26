@@ -45,3 +45,5 @@ app.get('/checklist', (req, res) => {
 app.get('/settings', (req, res) => {
   
 })
+
+app.listen(8000, () => {console.log("App is running")})
