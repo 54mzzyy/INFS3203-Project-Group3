@@ -43,7 +43,7 @@ app.get('/checklist', (req, res) => {
 })
 
 app.get('/settings', (req, res) => {
-  
+  res.render('settings')
 })
 
 app.get('/logout', async (req,res) => {
