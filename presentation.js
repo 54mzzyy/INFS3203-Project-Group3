@@ -27,23 +27,23 @@ app.post('/', (req, res) => {
 
 
 app.get('/main', (req, res) => {
-  
+  res.render('homepage')
 })
 
 app.get('/map', (req, res) => {
-  
+  res.render('map')
 })
 
 app.get('/map/:option', (req, res) => {
-  
+  res.render('map_food')
 })
 
 app.get('/checklist', (req, res) => {
-  
+  res.render('checklist')
 })
 
 app.get('/settings', (req, res) => {
-  
+  res.render('settings')
 })
 
 app.get('/logout', async (req,res) => {
