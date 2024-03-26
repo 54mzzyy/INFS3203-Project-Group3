@@ -2,12 +2,15 @@ const business = require('./business')
 const express = require('express')
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
+const handlebars = require('express-handlebars')
 let app = express()
 
 app.use(bodyParser.urlencoded())
 app.use(cookieParser())
 
-// Handlebars will be replaced with react
+app.set('views', __dirname + '/templates')
+app.set('view engine', 'handlebars')
+app.engine('handlebars', handlebars.engine())
 
 app.get('/', (req, res) => {
   res.render('login')
