@@ -27,11 +27,10 @@ app.post('/', (req, res) => {
 
 
 app.get('/main', (req, res) => {
-  
+  res.render('homepage')
 })
 
 app.get('/map', (req, res) => {
-  
 })
 
 app.get('/map/:option', (req, res) => {
