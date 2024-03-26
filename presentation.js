@@ -39,7 +39,7 @@ app.get('/map/:option', (req, res) => {
 })
 
 app.get('/checklist', (req, res) => {
-  
+  res.render('checklist')
 })
 
 app.get('/settings', (req, res) => {
