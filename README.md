@@ -21,7 +21,7 @@ Qatar's economic growth strategy aims to diversify its income sources, and touri
 
 
 # **Project Plan**
-**Qatar Tourism Web App - TourQ**
+**Qatar Tourism Web App - TourQ™**
 
 
 
@@ -200,23 +200,13 @@ Team: Up to 4 students
 
 # **Requirements**
 - ## IDE: Visual Studio Code
-- ## Language: Javascript >> NodeJS, ReactJS, ExpressJS
-- ## Framework: MERN [MongoDB, ExpressJS, ReactJS, NodeJS]
+- ## Language(s): Javascript => [NodeJS, ExpressJS, Handlebars] & BootStrap CSS
+- ## Framework: FLAME© (Original framework) => [MongoDB, ExpressJS, Handlebars, BootStrap-CSS, NodeJS]
 
 
 # Resource(s) 
 - **Source of Data: [Qatar Open Data](https://www.data.gov.qa/pages/default/)**
-- **MERN:**
-   - **[MongoDB Website](https://www.mongodb.com/languages/mern-stack-tutorial)**
-   - **[free code camp](https://www.freecodecamp.org/news/mern-stack-roadmap-what-you-need-to-know-to-build-full-stack-apps/)**
-   - **[Geeks for Geeks](https://www.geeksforgeeks.org/mern-stack/)**
-   - **[logRocket](https://blog.logrocket.com/mern-stack-tutorial/)**
-   - **[Medium](https://medium.com/@sriram.se21/step-by-step-tutorial-building-a-mern-stack-application-from-scratch-d281010715e4)**
-- **Radix UI**:
-   - **[Radix UI Website1](https://www.radix-ui.com/themes/docs/overview/getting-started)**
-   - **[Radix UI Website2](https://www.radix-ui.com/primitives/docs/overview/getting-started)**
-   - **[Make use of](https://www.makeuseof.com/react-application-radix-ui/)**
-   - **[logRocket](https://blog.logrocket.com/building-design-system-radix/)**
+
 
 
 
