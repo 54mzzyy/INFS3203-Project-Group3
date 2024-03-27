@@ -20,5 +20,6 @@ async function getUserDetails(username) {
 }
 
 module.exports = {
-    connectDatabase        
+    connectDatabase,
+    getUserDetails
 }
