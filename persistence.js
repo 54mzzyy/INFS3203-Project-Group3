@@ -12,6 +12,13 @@ async function connectDatabase() {
     }
 }
 
+async function getUserDetails(username) {
+  await connectDatabase();
+  let users = db.collection("user");
+  let result = await users.findOne({ username: username });
+  return result;
+}
+
 module.exports = {
     connectDatabase        
 }
