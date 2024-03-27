@@ -10,6 +10,6 @@ async function verifiedUser(u, p) {
 }
 
 module.exports = {
-  attemptLogin
+  verifiedUser
 }
 
