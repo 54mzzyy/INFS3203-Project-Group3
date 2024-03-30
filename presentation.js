@@ -21,7 +21,7 @@ app.post('/', (req, res) => {
   let password = req.body.password
   let verifiedUser = business.verifiedUser(username, password)
   if(verifiedUser) {
-    res.redirect('/main')
+    res.redirect('/home')
   }
   else {
     res.render('invalid')
@@ -29,8 +29,8 @@ app.post('/', (req, res) => {
 })
 
 
-app.get('/main', (req, res) => {
-  res.render('homepage')
+app.get('/home', (req, res) => {
+  res.render('home')
 })
 
 app.get('/map', (req, res) => {
