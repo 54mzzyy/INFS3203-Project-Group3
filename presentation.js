@@ -29,8 +29,8 @@ app.post('/', (req, res) => {
 })
 
 
-app.get('/main', (req, res) => {
-  res.render('homepage')
+app.get('/home', (req, res) => {
+  res.render('home')
 })
 
 app.get('/map', (req, res) => {
