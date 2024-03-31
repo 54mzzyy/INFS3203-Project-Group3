@@ -1,20 +1,53 @@
-<div class="container">
-    <h1>Settings</h1>
-    <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">System</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+<body>
+    <header>
+        <h1>TourQ</h1>
+
+        <div>
+            <img src="user-picture.jpg" alt="User Picture" width="50" height="50">
+            <span>User Name</span>  <!-- {{username}}-->
+        </div>
+
+        <form action="/search" method="get">
+            <input type="text" id="search" name="search" placeholder="Search...">
+            <input type="submit" value="Search">
+        </form>
+
+
+        <nav>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/map">Map</a></li>
+                <li><a href="/checklist">Checklist</a></li>
+                <li><a href="settings">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="settings section">
+            <h2>Preferences</h2>
+            <ul>
+                <li><a class="option" href="#">Language</a></li>
+                <li><a class="option" href="#">Planned Suggested Trips</a></li>
+                <li><a class="option" href="#">Notfication settings</a></li>
+            </ul>
+        </div>
+        <div class="settings section">
+            <h2>Information</h2>
+            <ul>
+                <li><a class="option" href="#">Weather Forecast</a></li>
+                <li><a class="option" href="#">Traffic</a></li>
+                <li><a class="option" href="#">Third-Party Servives</a></li>
+            </ul>
+        </div>
+        <div class="settings section">
+            <h2>Emergency Contact</h2>
+            <ul>
+                <li><a class="option" href="#">Police</a></li>
+                <li><a class="option" href="#">Hospital</a></li>
+                <li><a class="option" href="#">Embassy</a></li>
+            </ul>
+        </div>
     </div>
-    </div>
-    <br>
-    <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">Emergency Services</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-    </div>
-</div>
+    
+</body>

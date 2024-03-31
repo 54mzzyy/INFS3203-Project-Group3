@@ -21,7 +21,7 @@ app.post('/', (req, res) => {
   let password = req.body.password
   let verifiedUser = business.verifiedUser(username, password)
   if(verifiedUser) {
-    res.redirect('/main')
+    res.redirect('/home')
   }
   else {
     res.render('invalid')
