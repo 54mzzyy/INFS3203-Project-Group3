@@ -8,16 +8,53 @@
     <style>
        .container {
             text-align: center;
+            background-color: #fff;
         }
         body{
           background-image: url('https://i.pinimg.com/564x/e7/1a/7e/e71a7e8bb9bbfb7b9875acb9fc2ad864.jpg'); /* Replace 'background-pattern.jpg' with your image path */
           
         }
 
+        .navbar-custom {
+            background-color: #401919; /* Change the background color of the navbar */
+        }
+
+        .navbar-custom .navbar-brand,
+        .navbar-custom .navbar-nav .nav-link {
+            color: #fff; 
+        }
+
+        h2{
+          text-align:left;
+        }
+
+        .card-header{
+          background-color: #401919;
+          color: #ffffff;
+          text-align: left;
+        }
+        .card-body{
+          text-align: left;
+        }
+        .btn .btn-primary{
+          background-color: #401919;
+        }
+         footer {
+            background-color: #401919;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            bottom: 0;
+            width: 100%;
+        }
+        .btn{
+          background-color: #401919;
+        }
+       
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg navbar-custom">
       <div class="container-fluid">
         <a class="navbar-brand" href="/home">Tourq</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,16 +63,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="/home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Map</a>
+              <a class="nav-link" href="/map">Map</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Checklist</a>
+              <a class="nav-link" href="/checklist">Checklist</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Settings</a>
+              <a class="nav-link" href="/settings">Settings</a>
             </li>
             
             <!-- 
@@ -65,5 +102,10 @@
     </nav>
     {{{body}}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <footer>
+        <p>&copy; 2024 Your Company</p>
+    </footer>
   </body>
+</div>
+
 </html>
