@@ -50,6 +50,7 @@ app.get('/settings', (req, res) => {
 })
 
 app.get('/logout', async (req,res) => {
+  await business.deleteSession(req.cookies.session)
   res.redirect('/')
 })
 
