@@ -1,6 +1,6 @@
 const request = require('supertest');
 const express = require('express');
-const app = require('./presentation');
+const app = require('../presentation');
 
 
 describe('Presentation Layer Tests', () => {
