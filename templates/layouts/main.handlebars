@@ -27,7 +27,7 @@
       text-align-last: center;
     }
 
-    .card{
+    .intro{
       border: 2px solid transparent;
     }
 
@@ -61,9 +61,74 @@
        font-family: 'Amaze', sans-serif;
     }
 
-    h2 {
+
+    @import url('https://fonts.googleapis.com/css2?family=Unna&display=swap');
+    .title {
+      padding-bottom: 20px;
+      font-family: 'Unna', serif;
       text-align: left;
       padding-top: 68px;
+    }
+
+    /* demo shizzle only 
+    body {
+      background: #eee;
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+      outline: 1px solid #ccc; */
+
+      /*------good
+    .flex {
+      display: flex;
+    }
+
+    .flex-wrap {
+      flex-wrap: wrap;
+    } 
+
+    .-m-3 {
+    margin: -.75rem;
+}*/
+
+/**/
+/* Reset margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set flex container */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Set flex items */
+.flex-col {
+  flex: 1 0 0; /* Grow, shrink, and initial size */
+  padding: 20px; /* Adjust padding as needed */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Set background color and shadow for the flex items */
+.bg-white {
+  background-color: #fff;
+}
+
+.rounded-lg {
+  border-radius: 8px; /* Adjust border radius as needed */
+}
+
+.shadow-lg {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjust shadow properties as needed */
+}
+/**/
+    /* Still use global css (not utility css) for base typography etc? */
+    p {
+      margin-bottom: 0.8em;
     }
 
     .card-header {
