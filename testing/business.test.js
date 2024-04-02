@@ -1,12 +1,12 @@
 const business = require('../business');
 
 describe('Business', () => {
-    test('verifiedUser', async () => {
-        const u = 'testuser';
-        const p = 'testpassword';
+    test('verifiedUser with valid credentials', async () => {
+        const u = 'admin';
+        const p = '12admin34';
         const details = {
             username: u,
-            password: '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8'
+            password: p
         };
         jest.spyOn(business.persistence, 'getUserDetails').mockResolvedValue(details);
         const result = await business.verifiedUser(u, p);
@@ -22,11 +22,11 @@ describe('Business', () => {
     });
 
     test('verifiedUser with invalid password', async () => {
-        const u = 'testuser';
-        const p = 'testpassword';
+        const u = 'admin';
+        const p = 'incorrect_password'; // Provide an incorrect password here
         const details = {
             username: u,
-            password: 'invalid'
+            password: '12admin34'
         };
         jest.spyOn(business.persistence, 'getUserDetails').mockResolvedValue(details);
         const result = await business.verifiedUser(u, p);
