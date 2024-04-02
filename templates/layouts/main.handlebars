@@ -149,14 +149,19 @@
       background-color: #401919;
     }
 
-    footer {
+    footer{
       background-color: #401919;
       color: #fff;
-      padding: 20px;
       text-align: center;
+      position: absolute;
       bottom: 0;
+      right:0;
+      left: 0;
       width: 100%;
+      margin-left: 0px;
+      margin-right: 0px;
     }
+    .nav-item .nav-link{color: #fff;}
 
     .btn {
       background-color: #401919;
@@ -215,17 +220,21 @@
           </ul>
           -->
 
+        {{!-- van bar left side --}}
         <ul class="nav justify-content-end">
           <li class="nav-item">
+
+            {{!-- search --}}
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-light" type="submit">Search</button>
             </form>
           </li>
+
           <li>
             <hr class="dropdown-divider">
           </li>
-
+          {{!-- drop down list --}}
           <li class="nav-item dropdown">
             <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown"
               aria-expanded="false">
@@ -239,28 +248,58 @@
               <li><a class="dropdown-item" href="#">Log out</a></li>
             </ul>
           </li>
+          {{!-- profile pic --}}
           <li class="nav-item">
             <img src="https://th.bing.com/th/id/R.2df51c2821ca05a9a0376d24eca41678?rik=Vko2wPTLjpQOMg&pid=ImgRaw&r=0"
               width="35" height="40">
           </li>
         </ul>
-
-
-
-
       </div>
     </div>
   </nav>
 
 
-  {{{body}}}
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-  <footer>
-    <p>&copy; 2024 Your Company</p>
-  </footer>
-</body>
-</div>
+  <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 border-top" style="
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-left: 0px;
+    margin-right: 0px;"
+  >
+    <div class="col mb-3">
+      <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+      <p class="text">©TOURQ 2024</p>
+    </div>
 
-</html>
+    <div class="col mb-3">
+
+    </div>
+
+    <div class="col mb-3">
+      <h5>Preferences</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link">Language</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link">Planned Suggested Trips</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link ">Notfication settings</a></li>
+      </ul>
+    </div>
+
+    <div class="col mb-3">
+      <h5>Information</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="https://www.weather-forecast.com/locations/Doha/forecasts/latest" class="nav-link ">Weather Forecast</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link ">Traffic</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link ">Third-Party Servives</a></li>
+      </ul>
+    </div>
+
+    <div class="col mb-3">
+      <h5>Emergency Contact</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="https://portal.moi.gov.qa/wps/portal/MOIInternet/departmentcommittees/rescuepolice" class="nav-link">Police</a></li>
+        <li class="nav-item mb-2"><a href="https://www.hamad.qa/EN/Pages/default.aspx" class="nav-link ">Hospital</a></li>
+        <li class="nav-item mb-2"><a href="https://embassies.net/qatar-embassy" class="nav-link">Embassy</a></li>
+      </ul>
+    </div>
+  </footer>
