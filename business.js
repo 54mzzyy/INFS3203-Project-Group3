@@ -9,7 +9,19 @@ async function verifiedUser(u, p) {
   }
 }
 
-module.exports = {
-  verifiedUser
+async function startSession(key) {
+  await persistence.startSession(key)
 }
 
+async function getSession(key) {
+  return await persistenc.getSession(key)
+}
+
+async function deleteSession(key) {
+ await persistence.deleteSession(key)
+}
+
+module.exports = {
+  verifiedUser,
+  startSession, getSession, deleteSession
+}
