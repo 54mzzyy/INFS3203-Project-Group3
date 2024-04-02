@@ -49,6 +49,10 @@ app.get('/settings', (req, res) => {
   res.render('settings')
 })
 
+app.get('/register', (req, res) => {
+  res.render('register')
+})
+
 app.get('/logout', async (req,res) => {
   await business.deleteSession(req.cookies.session)
   res.redirect('/')
