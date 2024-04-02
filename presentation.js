@@ -28,7 +28,6 @@ app.post('/', (req, res) => {
   }
 })
 
-
 app.get('/home', (req, res) => {
   res.render('home')
 })
@@ -57,4 +56,6 @@ app.get('/logout', async (req,res) => {
   res.redirect('/')
 })
 
-app.listen(8000, () => {console.log("App is running")})
+app.listen(8000, () => {
+  console.log("App is running")
+})
