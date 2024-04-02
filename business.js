@@ -9,26 +9,19 @@ async function verifiedUser(u, p) {
   }
 }
 
-async function startSession(data) {
-  let sessionId = crypto.randomUUID()
-  let sessionData = {
-      sessionNumber: sessionId,
-      expiry: new Date(Date.now() + 1000*60),
-      data: data
-  }
-  await persistence.startSession(sessionData)
-  return sessionData
+async function startSession(key) {
+  await persistence.startSession(key)
 }
 
-async function getSessionData(key) {
-  return await persistence.getSession(key)
+async function getSession(key) {
+  return await persistenc.getSession(key)
 }
 
 async function deleteSession(key) {
-  await persistence.deleteSession(key)
+ await persistence.deleteSession(key)
 }
 
 module.exports = {
   verifiedUser,
-  startSession, getSessionData, deleteSession
+  startSession, getSession, deleteSession
 }
