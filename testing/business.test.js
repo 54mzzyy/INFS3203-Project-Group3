@@ -1,4 +1,4 @@
-const business = require('./business');
+const business = require('../business');
 
 describe('Business', () => {
     test('verifiedUser', async () => {

@@ -1,4 +1,4 @@
-const persistence = require('./persistence');
+const persistence = require('../persistence');
 
 describe('Persistence', () => {
     test('getUserDetails', async () => {
