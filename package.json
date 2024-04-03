@@ -17,6 +17,6 @@
   },
   "scripts": {
     "test": "jest",
-    "lint:handlebars": "eslint . --ext .handlebars"
+    "lint:js": "eslint . --ext .js"
   }
 }

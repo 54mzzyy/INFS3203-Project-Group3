@@ -1,6 +1,6 @@
 const request = require('supertest');
-const express = require('express');
 const app = require('../presentation');
+const { describe, it, expect } = require('@jest/globals');
 
 // Create a test suite
 describe('Presentation Layer Tests', () => {
