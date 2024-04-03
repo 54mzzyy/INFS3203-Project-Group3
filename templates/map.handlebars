@@ -1,13 +1,90 @@
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; 
+}
+
+.map_navigation_bar {
+    background-color: #fff; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    padding: 10px 0;
+}
+
+.map_navigation_bar nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.map_navigation_bar nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.map_navigation_bar nav ul li:last-child {
+    margin-right: 0;
+}
+
+.map_navigation_bar nav ul li a {
+    text-decoration: none;
+    color: #401919; 
+    font-weight: bold;
+    padding: 8px 16px; 
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border: 2px solid #401919; 
+}
+
+.map_navigation_bar nav ul li a:hover {
+    background-color: #401919; 
+    color: #fff;
+}
+
+.map-container {
+    width: 100%;
+    height: calc(100vh - 60px);
+    position: relative;
+    overflow: hidden;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+footer {
+    position: relative;
+}
+</style>
+
 <body>
-    <div class="container">
-        <header>
-            <h1>Map</h1>
-        </header>
+    <div class="map_navigation_bar">
+        <nav>
+            <ul>
+                <li><a data-value="hotels" href="https://www.google.com/travel/search?q=qatar%27s%20hotels&g2lb=2503771%2C2503781%2C4284970%2C4291517%2C4814050%2C4874190%2C4893075%2C4965018%2C4965990%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72420596%2C72421566%2C72458066%2C72462234%2C72470440%2C72470899%2C72471280%2C72472051%2C72473841%2C72481459%2C72485656%2C72485658%2C72486593%2C72494250%2C72498532%2C72513422%2C72513513%2C72520079%2C72523972%2C72524709%2C72530239&hl=en-QA&gl=qa&cs=1&ssta=1&ts=CAESCAoCCAMKAggDGhwSGhIUCgcI6A8QBBgHEgcI6A8QBBgIGAEyAhAAKgcKBToDUUFS&qs=CAE4Bg&ap=KigKEgmitAEaLjU5QBGWwd326LJJQBISCUsDXR1ucjlAEZbB3Xaj0klASABoAQ&ictx=111&ved=0CAAQ5JsGahcKEwj4_Iqrh6aFAxUAAAAAHQAAAAAQCw">Hotels</a></li>
+                <li><a data-value="restaurants" href="https://www.google.com/maps/search/restaurants/@25.2970832,51.5315766,12.55z?entry=ttu">Restaurants</a></li>
+                <li><a data-value="metro" href="https://www.google.com/maps/search/metro/@25.2972744,51.5313412,12z/data=!3m1!4b1?entry=ttu">Metro Stations</a></li>
+            </ul>
+        </nav>
     </div>
 
-    <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" 
-    src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20Doha+(doha)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-    <a href='https://www.easybooking.eu/'>Doha, Qatar</a> 
-    <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=2f968bc16650f73db1e259571cc22c13c20d8b20'></script>
-
+    <div class="map-container">
+        <div class="map">
+            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" 
+            src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20Doha+(tourQ)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> 
+        </div>
+    </div>
 </body>
+
