@@ -1,5 +1,5 @@
 const persistence = require('./persistence')
-const { createHash, randomUUID } = require("node:crypto") 
+const crypto = require('crypto')
 
 async function verifiedUser(u, p) {
   let details = await persistence.getUserDetails(u);
