@@ -1,0 +1,37 @@
+name: JavaScript Safety Check
+
+on:
+  push:
+    branches:
+      - main
+      - staging
+      - development
+  pull_request:
+    branches:
+      - main
+      - staging
+      - development
+
+jobs:
+  check:
+    name: Check JavaScript files
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Find JavaScript files
+        id: find_js_files
+        run: |
+          find . -type f -name "*.js" -not -path "./node_modules/*" > js_files.txt
+
+      - name: Check for unsafe regular expressions
+        if: steps.find_js_files.outputs.stdout != ''
+        run: |
+          while IFS= read -r file; do
+            if grep -q -E '(/\\.|[^/\\])(\\.|[^/\\])*\|' "$file"; then
+              echo "Unsafe regular expression found in $file"
+              exit 1
+            fi
+          done < js_files.txt
