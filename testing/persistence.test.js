@@ -1,4 +1,5 @@
 const persistence = require('../persistence');
+const { describe, test, expect } = require('@jest/globals');
 
 describe('Persistence', () => {
     test('getUserDetails', async () => {
