@@ -14,7 +14,7 @@ async function startSession(key) {
 }
 
 async function getSession(key) {
-  return await persistenc.getSession(key)
+  return await persistence.getSession(key)
 }
 
 async function deleteSession(key) {
