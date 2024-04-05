@@ -28,6 +28,7 @@ app.post('/', (req, res) => {
   }
 })
 
+
 app.get('/home', (req, res) => {
   res.render('home')
 })
@@ -49,15 +50,9 @@ app.get('/register', (req, res) => {
   res.render('register')
 })
 
-app.get('/profile', (req, res) => {
-  res.render('profile')
-})
-
 app.get('/logout', async (req,res) => {
   await business.deleteSession(req.cookies.session)
   res.redirect('/')
 })
 
-app.listen(8000, () => {
-  console.log("App is running")
-})
+app.listen(8000, () => {console.log("App is running")})
