@@ -1,6 +1,5 @@
 const persistence = require('./persistence')
-const { createHash, /*randomUUID*/ } = require("node:crypto") 
-// commented out randomUUID because it's currently not used in the code.. -Sam
+const crypto = require('crypto')
 
 async function verifiedUser(u, p) {
   let details = await persistence.getUserDetails(u);
