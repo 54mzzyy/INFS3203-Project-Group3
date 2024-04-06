@@ -15,6 +15,10 @@
       background-color: #fff;
     }
 
+    .nav-link {
+      padding: 0.5rem 1rem; /* Adjust padding as needed */
+    }
+
     .about{
       /*font-family: 'Montserrat', sans-serif; */
       font-size: 18px;
@@ -458,19 +462,28 @@
         font-size: 27px;
       }
 
+      .nav-link:hover,
+      .nav-link:active {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Adjust shadow color and size as needed */
+        transition: box-shadow 0.3s ease; /* Add a smooth transition effect */
+      }
+
   </style>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-custom">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/home">Tourq</a>
+      {{!-- <a class="navbar-brand" href="/home">Home</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
+      </button> --}}
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/home">Home</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="/map">Map</a>
           </li>
@@ -478,21 +491,6 @@
             <a class="nav-link" href="/checklist">Checklist</a>
           </li>
         </ul>
-
-        <!-- 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-          </ul>
-          -->
 
         {{!-- van bar left side --}}
         <ul class="nav justify-content-end">
@@ -557,7 +555,7 @@
 </body>
 
 
-<footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 border-top" style="
+{{!-- <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 border-top" style="
     padding-right: 0px;
     padding-left: 0px;
     margin-left: 0px;
@@ -600,4 +598,4 @@
         <li class="nav-item mb-2"><a href="https://embassies.net/qatar-embassy" class="nav-link">Embassy</a></li>
       </ul>
     </div>
-  </footer> 
+  </footer>  --}}
