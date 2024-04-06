@@ -16,8 +16,14 @@
     }
 
     .nav-link {
-      padding: 0.5rem 1rem; /* Adjust padding as needed */
+      padding: 0.5rem 20px; /* Adjust padding as needed */
     }
+
+      .nav-link:hover,
+      .nav-link:active {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Adjust shadow color and size as needed */
+        transition: box-shadow 0.3s ease; /* Add a smooth transition effect */
+      }
 
     .about{
       /*font-family: 'Montserrat', sans-serif; */
@@ -445,7 +451,7 @@
           height: 70px;
           width: 70px;
           position: fixed;
-          top: 20px;
+          top: 20px; 
           padding-right: 8px;
       }
 
@@ -462,11 +468,6 @@
         font-size: 27px;
       }
 
-      .nav-link:hover,
-      .nav-link:active {
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Adjust shadow color and size as needed */
-        transition: box-shadow 0.3s ease; /* Add a smooth transition effect */
-      }
 
   </style>
 </head>
