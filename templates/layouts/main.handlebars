@@ -4,21 +4,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tourq</title>
+  <title>TourQ</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <style>
     .container {
       text-align: center;
       background-color: #fff;
     }
 
-    body {
-      /*background-image: url('https://i.pinimg.com/564x/e7/1a/7e/e71a7e8bb9bbfb7b9875acb9fc2ad864.jpg');*/
-      /* Replace 'background-pattern.jpg' with your image path */
-
+    .nav-link {
+      padding: 0.5rem 20px; /* Adjust padding as needed */
     }
+
+      .nav-link:hover,
+      .nav-link:active {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Adjust shadow color and size as needed */
+        transition: box-shadow 0.3s ease; /* Add a smooth transition effect */
+      }
 
     .about{
       /*font-family: 'Montserrat', sans-serif; */
@@ -63,275 +68,278 @@
 
     /*SHIFTONE*/
     @gray-darker:               #444444;
-@gray-dark:                 #696969;
-@gray:                      #999999;
-@gray-light:                #cccccc;
-@gray-lighter:              #ececec;
-@gray-lightest:             lighten(@gray-lighter,4%);
-
-*,
-*::before,
-*::after { 
-  box-sizing: border-box;
-}
-
-img {
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
-}
-
-.btn {
-  background-color: white;
-  border: 1px solid @gray-light;
-  //border-radius: 1rem;
-  color: #fff;
-  padding: 0.5rem;
-  text-transform: lowercase;
-}
-
-.btn--block {
-  display: block;
-  width: 100%;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.cards__item {
-  display: flex;
-  padding: 1rem;
-  @media(min-width: 40rem) {
-    width: 50%;
-  }
-  @media(min-width: 56rem) {
-    width: 33.3333%;
-  }
-}
-
-.card {
-  background-color: white;
-  border-radius: 0.25rem;
-  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.5);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  &:hover {
-    .card__image {
-      filter: contrast(100%);
-    }
-  }
-}
-
-.card__content {
-  display: flex;
-  flex: 1 1 auto;
-  flex-direction: column;
-  padding: 1rem;
-}
-
-.card__image {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  filter: contrast(70%);
-  //filter: saturate(180%);
-  overflow: hidden;
-  position: relative;
-  transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
-  &::before {
-    content: "";
-	  display: block;
-    padding-top: 56.25%; // 16:9 aspect ratio
-  }
-  @media(min-width: 40rem) {
-    &::before {
-      padding-top: 66.6%; // 3:2 aspect ratio
-    }
-  }
-}
-
-
-.card__title {
-  color: @gray-dark;
-  font-size: 1.25rem;
-  font-weight: 300;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.card__text {
-  flex: 1 1 auto;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  margin-bottom: 1.25rem;
-  text-align: justify;
-  text-align-last: center;
-  padding-left: 10%;
-  padding-right: 10%;
-}
-
-
-    p {
-      margin-bottom: 0.8em;
-
-    @import url('https://fonts.googleapis.com/css2?family=Amaze&display=swap');
-    .navbar-brand{
-       font-family: 'Amaze', sans-serif;
-
-    }
-
-    @import url('https://fonts.googleapis.com/css2?family=Unna&display=swap');
-    h2 {
-      font-family: 'Unna', serif;
-      text-align: left;
-      padding-top: 68px;
-    }
-
-    /*SHIFTONE*/
-    @gray-darker:               #444444;
     @gray-dark:                 #696969;
     @gray:                      #999999;
     @gray-light:                #cccccc;
     @gray-lighter:              #ececec;
     @gray-lightest:             lighten(@gray-lighter,4%);
 
-  *,
-  *::before,
-  *::after { 
-    box-sizing: border-box;
-  }
+      *,
+      *::before,
+      *::after { 
+        box-sizing: border-box;
+      }
 
+      img {
+        height: auto;
+        max-width: 100%;
+        vertical-align: middle;
+      }
 
-    footer{
-      background-color: #401919;
-      color: #fff;
-      text-align: center;
-      position: relative;
-      bottom: 0;
-      right:0;
-      left: 0;
-      width: 100%;
-      margin-left: 0px;
-      margin-right: 0px;
-    }
-    .nav-item .nav-link{color: #fff;}
+      .btn {
+       // background-color: white;
+        border: 1px solid @gray-light;
+        //border-radius: 1rem;
+        color: #fff;
+        padding: 0.5rem;
+        text-transform: lowercase;
+      }
 
-  img {
-    height: auto;
-    max-width: 100%;
-    vertical-align: middle;
-  }
+      .btn--block {
+        display: block;
+        width: 100%;
+      }
 
-  .btn {
-    background-color: white;
-    border: 1px solid @gray-light;
-    //border-radius: 1rem;
-    color: #fff;
-    padding: 0.5rem;
-    text-transform: lowercase;
-  }
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
 
-  .btn--block {
-    display: block;
-    width: 100%;
-  }
+      .cards__item {
+        display: flex;
+        padding: 1rem;
+        @media(min-width: 40rem) {
+          width: 50%;
+        }
+        @media(min-width: 56rem) {
+          width: 33.3333%;
+        }
+      }
 
-  .cards {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    padding-left: 30;
-    padding-right: 30;
-  }
+      .card {
+        background-color: white;
+        border-radius: 0.25rem;
+        box-shadow: 0 20px 40px -14px rgba(0,0,0,0.5);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        &:hover {
+          .card__image {
+            filter: contrast(100%);
+          }
+        }
+      }
 
-  .cards__item {
-    display: flex;
-    padding: 2rem;
-    @media(min-width: 40rem) {
-      width: 50%;
-    }
-    @media(min-width: 56rem) {
-      width: 33.3333%;
-    }
-  }
+      .card__content {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+        padding: 1rem;
+      }
 
-  .card {
-    background-color: white;
-    border-radius: 0.25rem;
-    box-shadow: 0 20px 40px -14px rgba(0,0,0,0.9);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    &:hover {
       .card__image {
-        filter: contrast(100%);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-top-left-radius: 0.25rem;
+        border-top-right-radius: 0.25rem;
+        filter: contrast(70%);
+        //filter: saturate(180%);
+        overflow: hidden;
+        position: relative;
+        transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
+        &::before {
+          content: "";
+          display: block;
+          padding-top: 56.25%; // 16:9 aspect ratio
+        }
+        @media(min-width: 40rem) {
+          &::before {
+            padding-top: 66.6%; // 3:2 aspect ratio
+          }
+        }
       }
-    }
-  }
 
-  .card__content {
-    display: flex;
-    flex: 1 1 auto;
-    flex-direction: column;
-    padding: 1rem;
-  }
 
-  .card__image {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
-    filter: contrast(70%);
-    //filter: saturate(180%);
-    overflow: hidden;
-    position: relative;
-    transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
-    &::before {
-      content: "";
-      display: block;
-      padding-top: 56.25%; // 16:9 aspect ratio
-    }
-    @media(min-width: 40rem) {
-      &::before {
-        padding-top: 66.6%; // 3:2 aspect ratio
+      .card__title {
+        color: @gray-dark;
+        font-size: 1.25rem;
+        font-weight: 300;
+        letter-spacing: 2px;
+        text-transform: uppercase;
       }
-    }
 
-    .qimage{
-      height: 610px;
-      width: 100%;
-    }
+      .card__text {
+        flex: 1 1 auto;
+        font-size: 0.875rem;
+        line-height: 1.5;
+        margin-bottom: 1.25rem;
+        text-align: justify;
+        text-align-last: center;
+        padding-left: 10%;
+        padding-right: 10%;
+      }
 
 
-  .card__title {
-    color: @gray-dark;
-    font-size: 1.25rem;
-    font-weight: 300;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
+          p {
+            margin-bottom: 0.8em;
+          }
 
-  .card__text {
-    flex: 1 1 auto;
-    font-size: 0.875rem;
-    line-height: 1.5;
-    margin-bottom: 1.25rem;
-    text-align: justify;
-    text-align-last: center;
-    padding-left: 10%;
-    padding-right: 10%;
-  }
+          @import url('https://fonts.googleapis.com/css2?family=Amaze&display=swap');
+          .navbar-brand{
+            font-family: 'Amaze', sans-serif;
+
+          }
+          
+
+          @import url('https://fonts.googleapis.com/css2?family=Unna&display=swap');
+          h2 {
+            font-family: 'Unna', serif;
+            text-align: left;
+            padding-top: 68px;
+          }
+
+          /*SHIFTONE*/
+          @gray-darker:               #444444;
+          @gray-dark:                 #696969;
+          @gray:                      #999999;
+          @gray-light:                #cccccc;
+          @gray-lighter:              #ececec;
+          @gray-lightest:             lighten(@gray-lighter,4%);
+
+        *,
+        *::before,
+        *::after { 
+          box-sizing: border-box;
+        }
+
+
+          footer{
+            background-color: #401919;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            right:0;
+            left: 0;
+            width: 100%;
+            margin-left: 0px;
+            margin-right: 0px;
+          }
+          .nav-item .nav-link{color: #fff;}
+
+        img {
+          height: auto;
+          max-width: 100%;
+          vertical-align: middle;
+        }
+
+        .btn {
+         // background-color: white;
+          border: 1px solid @gray-light;
+          //border-radius: 1rem;
+          color: #fff;
+          padding: 0.5rem;
+          text-transform: lowercase;
+        }
+
+        .btn--block {
+          display: block;
+          width: 100%;
+        }
+
+        .cards {
+          display: flex;
+          flex-wrap: wrap;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          padding-left: 30;
+          padding-right: 30;
+        }
+
+        .cards__item {
+          display: flex;
+          padding: 2rem;
+          @media(min-width: 40rem) {
+            width: 50%;
+          }
+          @media(min-width: 56rem) {
+            width: 33.3333%;
+          }
+        }
+
+        .card {
+          background-color: white;
+          border-radius: 0.25rem;
+          box-shadow: 0 20px 40px -14px rgba(0,0,0,0.9);
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+          &:hover {
+            .card__image {
+              filter: contrast(100%);
+            }
+          }
+        }
+
+        .card__content {
+          display: flex;
+          flex: 1 1 auto;
+          flex-direction: column;
+          padding: 1rem;
+        }
+
+        .card__image {
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-top-left-radius: 0.25rem;
+          border-top-right-radius: 0.25rem;
+          filter: contrast(70%);
+          //filter: saturate(180%);
+          overflow: hidden;
+          position: relative;
+          transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);
+          &::before {
+            content: "";
+            display: block;
+            padding-top: 56.25%; // 16:9 aspect ratio
+          }
+        }
+          @media(min-width: 40rem) {
+            &::before {
+              padding-top: 66.6%; // 3:2 aspect ratio
+            }
+          }
+
+          .qimage{
+            height: 610px;
+            width: 100%;
+          }
+
+
+        .card__title {
+          color: @gray-dark;
+          font-size: 1.25rem;
+          font-weight: 300;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+        }
+
+        .card__text {
+          flex: 1 1 auto;
+          font-size: 0.875rem;
+          line-height: 1.5;
+          margin-bottom: 1.25rem;
+          text-align: justify;
+          text-align-last: center;
+          padding-left: 10%;
+          padding-right: 10%;
+        }
 
 
       p {
@@ -372,7 +380,7 @@ img {
       }
 
       .navbar .dropdown-menu {
-        min-width: 150px;
+        min-width: 10px;
       }
 
       .carousel {
@@ -380,9 +388,86 @@ img {
       }
 
       .qimage{
-        height: 670px;
+        height: 685px;
         width: 100%;
       }
+
+      {{!-- search --}}
+
+      .scontainer{
+        padding-right: 4px;
+      }
+
+      .scontainer .form{
+          position: relative;
+      }
+
+      .scontainer .form .fa-search{
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 17px;
+            left: 10px;
+            color: #9ca3af;
+}
+
+      .scontainer .form span{
+          position: absolute;
+          right: 17px;
+          top: 10px;
+          bottom: 10px;
+          //padding: 2px;
+          border-left: 1px solid #d1d5db;
+      }
+
+      .scontainer .left-pan{
+          padding-left: 7px;
+      }
+
+      .scontainer .left-pan i{
+        padding-left: 10px;
+      }
+
+      .scontainer .form-input{
+          height: 43px;
+          text-indent: 23px;
+          border-radius: 10px;
+          width: 300px;
+      }
+
+      .scontainer .form-input:focus{
+          box-shadow: none;
+          border:none;
+      }
+
+      .scontainer .col-md-6 {
+              flex: 0 0 auto;
+              width: 100%;
+          }
+
+      .left-pan-i {
+          color: #fff;
+          display: block;
+          height: 70px;
+          width: 70px;
+          position: fixed;
+          top: 20px; 
+          padding-right: 8px;
+      }
+
+      .nav-item li{
+        //padding-right: 4px;
+      }
+
+      .nav.justify-content-end {
+        padding-right: 40px;
+      }
+
+      #user{
+        padding-left: 13px;
+        font-size: 27px;
+      }
+
 
   </style>
 </head>
@@ -390,13 +475,16 @@ img {
 <body>
   <nav class="navbar navbar-expand-lg navbar-custom">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/home">Tourq</a>
+      {{!-- <a class="navbar-brand" href="/home">Home</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
+      </button> --}}
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/home">Home</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="/map">Map</a>
           </li>
@@ -405,30 +493,34 @@ img {
           </li>
         </ul>
 
-        <!-- 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-          </ul>
-          -->
-
         {{!-- van bar left side --}}
         <ul class="nav justify-content-end">
           <li class="nav-item">
 
             {{!-- search --}}
-            <form class="d-flex" role="search">
+            {{!-- <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-light" type="submit">Search</button>
-            </form>
+            </form> --}}
+
+            {{!-- new search --}}
+            <div class="scontainer">
+
+            <div class="row height d-flex justify-content-center align-items-center">
+
+              <div class="col-md-6">
+
+                <div class="form">
+                  <i class="fa fa-search"></i>
+                  <input type="text" class="form-control form-input" placeholder="Search anything...">
+                  <span class="left-pan"><i class="fa fa-microphone"></i></span>
+                </div>
+                
+              </div>
+              
+            </div>
+            
+          </div>
           </li>
 
           <li>
@@ -438,10 +530,10 @@ img {
           <li class="nav-item dropdown">
             <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown"
               aria-expanded="false">
-              Profile Settings
+              <span class="left-pan"><i class="fas fa-cog"></i></span>
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="/profile">Profile</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
@@ -450,8 +542,9 @@ img {
           </li>
           {{!-- profile pic --}}
           <li class="nav-item">
-            <img src="https://th.bing.com/th/id/R.2df51c2821ca05a9a0376d24eca41678?rik=Vko2wPTLjpQOMg&pid=ImgRaw&r=0"
-              width="35" height="40">
+            {{!-- <img src="https://th.bing.com/th/id/R.2df51c2821ca05a9a0376d24eca41678?rik=Vko2wPTLjpQOMg&pid=ImgRaw&r=0"
+              width="35" height="40"> --}}
+              <span class="left-pan-i"><i class="fas fa-user" id="user"></i></span>
               
           </li>
         </ul>
@@ -463,7 +556,7 @@ img {
 </body>
 
 
-  {{!-- <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 border-top" style="
+{{!-- <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 border-top" style="
     padding-right: 0px;
     padding-left: 0px;
     margin-left: 0px;
@@ -506,4 +599,4 @@ img {
         <li class="nav-item mb-2"><a href="https://embassies.net/qatar-embassy" class="nav-link">Embassy</a></li>
       </ul>
     </div>
-  </footer> --}}
+  </footer>  --}}
