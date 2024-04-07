@@ -45,6 +45,9 @@ app.get('/checklist', (req, res) => {
   res.render('checklist')
 })
 
+app.get('/language', (req, res) => {
+  res.render('language')
+})
 
 app.get('/register', (req, res) => {
   res.render('register')
