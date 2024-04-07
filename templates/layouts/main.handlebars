@@ -35,6 +35,11 @@
     .intro{
       border: 2px solid transparent;
     }
+    
+    .py-5 {
+        padding-top: 1.5rem !important;
+        padding-bottom: 0.1rem !important;
+    }
 
     .carousel-caption {
         position: absolute;
@@ -50,7 +55,6 @@
         border-radius: 13px; /* Add border-radius for rounded corners */
     }
 
-
     .navbar-custom {
       background-color: #401919;
       /* Change the background color of the navbar */
@@ -61,7 +65,14 @@
       color: #fff;
     }
 
+    @import url('https://fonts.googleapis.com/css2?family=Amaze&display=swap');
+    .navbar-brand{
+       font-family: 'Amaze', sans-serif;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Unna&display=swap');
     h2 {
+      font-family: 'Unna', serif;
       text-align: left;
       padding-top: 68px;
     }
@@ -92,7 +103,6 @@
         //border-radius: 1rem;
         color: #fff;
         padding: 0.5rem;
-        text-transform: lowercase;
       }
 
       .btn--block {
@@ -243,7 +253,6 @@
           //border-radius: 1rem;
           color: #fff;
           padding: 0.5rem;
-          text-transform: lowercase;
         }
 
         .btn--block {
@@ -353,39 +362,40 @@
         text-align: left;
       }
 
-      .card-body {
-        text-align: left;
-      }
+    .card-body {
+      text-align: left;
+    }
 
-      .btn .btn-primary {
-        background-color: #401919;
-      }
+    .btn .btn-primary {
+      background-color: #401919;
+    }
 
-      footer{
-        background-color: #401919;
-        color: #fff;
-        text-align: center;
-        position: relative;
-        bottom: 0;
-        right:0;
-        left: 0;
-        width: 100%;
-        margin-left: 0px;
-        margin-right: 0px;
-      }
-      .nav-item .nav-link{color: #fff;}
+    footer{
+      background-color: #401919;
+      color: #fff;
+      text-align: center;
+      position: relative;
+      bottom: 0;
+      right:0;
+      left: 0;
+      width: 100%;
+      margin-left: 0px;
+      margin-right: 0px; 
+    }  
 
-      .btn {
-        background-color: #401919;
-      }
+    .nav-item .nav-link{color: #fff;}
+
+    .btn {
+      background-color: #401919;
+    }
 
       .navbar .dropdown-menu {
         min-width: 10px;
       }
 
-      .carousel {
-        height: 300;
-      }
+    .carousel {
+      height: 300;
+    }
 
       .qimage{
         height: 685px;
@@ -480,6 +490,7 @@
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button> --}}
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
@@ -496,7 +507,6 @@
         {{!-- van bar left side --}}
         <ul class="nav justify-content-end">
           <li class="nav-item">
-
             {{!-- search --}}
             {{!-- <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -533,7 +543,7 @@
               <span class="left-pan"><i class="fas fa-cog"></i></span>
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/profile">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Profile</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
@@ -555,8 +565,7 @@
   {{{body}}}
 </body>
 
-
-{{!-- <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 border-top" style="
+ <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 border-top" style="
     padding-right: 0px;
     padding-left: 0px;
     margin-left: 0px;
@@ -573,30 +582,83 @@
 
     </div>
 
-    <div class="col mb-3">
+    <div class="col mb-3" >
       <h5>Preferences</h5>
-      <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="#" class="nav-link">Language</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link">Planned Suggested Trips</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link ">Notfication settings</a></li>
+      <ul class="nav flex-column "style="margin-bottom: 0;" >
+        <li class="nav-item mb-2"><a href="/language" class="nav-link"
+        style="
+          padding-left: 0px;
+          padding-right: 0px;
+          padding-top: 0px;
+          padding-bottom: 0px;">
+          Language</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link"
+         style="
+          padding-left: 0px;
+          padding-right: 0px;
+          padding-top: 0px;
+          padding-bottom: 0px;">
+          Planned Suggested Trips</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link"
+        style="
+          padding-left: 0px;
+          padding-right: 0px;
+          padding-top: 0px;
+          padding-bottom: 0px;">
+          Notifications settings</a></li>
       </ul>
     </div>
 
     <div class="col mb-3">
       <h5>Information</h5>
-      <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="https://www.weather-forecast.com/locations/Doha/forecasts/latest" class="nav-link ">Weather Forecast</a></li>
-        <li class="nav-item mb-2"><a href="https://portal.moi.gov.qa/wps/portal/MOIInternet/departmentcommittees/gatraffic" class="nav-link ">Traffic</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link ">Third-Party Servives</a></li>
+      <ul class="nav flex-column" style="margin-bottom: 0;">
+        <li class="nav-item mb-2"><a href="https://www.accuweather.com/en/qa/doha/271669/weather-forecast/271669" class="nav-link"
+         style="
+          padding-left: 0px;
+          padding-right: 0px;
+          padding-top: 0px;
+          padding-bottom: 0px;">
+          Weather Forecast</a></li>
+        <li class="nav-item mb-2"><a href="https://www.doha.directory/traffic-department-headquarters/i/433" class="nav-link"
+         style="
+          padding-left: 0px;
+          padding-right: 0px;
+          padding-top: 0px;
+          padding-bottom: 0px;">
+          Traffic</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link"
+         style="
+          padding-left: 0px;
+          padding-right: 0px;
+          padding-top: 0px;
+          padding-bottom: 0px;">
+          Third-Party Servives</a></li>
       </ul>
     </div>
 
     <div class="col mb-3">
       <h5>Emergency Contact</h5>
-      <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="https://portal.moi.gov.qa/wps/portal/MOIInternet/departmentcommittees/rescuepolice" class="nav-link">Police</a></li>
-        <li class="nav-item mb-2"><a href="https://www.hamad.qa/EN/Pages/default.aspx" class="nav-link ">Hospital</a></li>
-        <li class="nav-item mb-2"><a href="https://embassies.net/qatar-embassy" class="nav-link">Embassy</a></li>
+      <ul class="nav flex-column" style="margin-bottom: 0;">
+        <li class="nav-item mb-2"><a href="https://portal.moi.gov.qa/wps/portal/MOIInternet/departmentcommittees/rescuepolice" class="nav-link" 
+         style="
+          padding-left: 0px;
+          padding-right: 0px;
+          padding-top: 0px;
+          padding-bottom: 0px;">
+          Police</a></li>
+        <li class="nav-item mb-2"><a href="https://www.hamad.qa/EN/Pages/default.aspx" class="nav-link"
+         style="
+          padding-left: 0px;
+          padding-right: 0px;
+          padding-top: 0px;
+          padding-bottom: 0px;"
+          >Hospital</a></li>
+        <li class="nav-item mb-2"><a href="https://embassies.net/qatar/doha" class="nav-link"  style="
+          padding-left: 0px;
+          padding-right: 0px;
+          padding-top: 0px;
+          padding-bottom: 0px;">
+          Embassy</a></li>
       </ul>
     </div>
-  </footer>  --}}
+  </footer>
