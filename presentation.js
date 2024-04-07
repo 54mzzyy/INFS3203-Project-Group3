@@ -28,6 +28,7 @@ app.post('/', (req, res) => {
   }
 })
 
+
 app.get('/home', (req, res) => {
   res.render('home')
 })
@@ -44,16 +45,12 @@ app.get('/checklist', (req, res) => {
   res.render('checklist')
 })
 
-app.get('/settings', (req, res) => {
-  res.render('settings')
+app.get('/language', (req, res) => {
+  res.render('language')
 })
 
 app.get('/register', (req, res) => {
   res.render('register')
-})
-
-app.get('/profile', (req, res) => {
-  res.render('profile')
 })
 
 app.get('/logout', async (req,res) => {
@@ -61,6 +58,4 @@ app.get('/logout', async (req,res) => {
   res.redirect('/')
 })
 
-app.listen(8000, () => {
-  console.log("App is running")
-})
+app.listen(8000, () => {console.log("App is running")})
