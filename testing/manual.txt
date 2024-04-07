@@ -6,6 +6,6 @@ How to run tests:
 
 1> open terminal
 
-2> navigate to project folder (If not in the folder)
+2> navigate to "testing" folder
 
 3> type "npm test" and press Enter
