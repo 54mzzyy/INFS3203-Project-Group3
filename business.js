@@ -1,5 +1,5 @@
 const persistence = require('./persistence')
-const { createHash } = require("node:crypto") 
+const crypto = require('crypto')
 
 async function addUser(u, p) {
   let newUser = {
@@ -9,12 +9,16 @@ async function addUser(u, p) {
   await persistence.addUser(newUser)
 }
 
-async function verifiedUser(u, p) {
-  let details = await persistence.getUserDetails(u);
-  let hashedPass = createHash("sha512").update(p).digest("hex")  
-  if (details == undefined || details.password != hashedPass) {
-    return undefined;
-  }
+async function verifyUser(user, pass) {
+  let encryptedpass = await hashPassword(pass)
+  return await persistence.verifyUser(user, encryptedpass)
+}
+
+async function hashPassword(pass) {
+  let hash = crypto.createHash('sha512')
+  hash.update(pass)
+  let encryptedpass = hash.digest('hex')
+  return encryptedpass
 }
 
 async function startSession(key) {
@@ -30,6 +34,6 @@ async function deleteSession(key) {
 }
 
 module.exports = {
-  addUser, verifiedUser,
+  addUser, verifyUser,
   startSession, getSession, deleteSession
 }

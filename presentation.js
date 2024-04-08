@@ -24,7 +24,7 @@ app.post('/', async (req, res) => {
     res.redirect('/home')
   }
   else {
-    
+    res.send('Invalid Credentials')
   }
 })
 
