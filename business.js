@@ -39,5 +39,5 @@ async function getUserDetails(username) {
 
 module.exports = {
   addUser, verifyUser,
-  startSession, getSession, deleteSession
+  startSession, getSession, deleteSession, getUserDetails
 }
