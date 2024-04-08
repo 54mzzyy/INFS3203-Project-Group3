@@ -2,6 +2,14 @@ const persistence = require('./persistence')
 const { createHash, /*randomUUID*/ } = require("node:crypto") 
 // commented out randomUUID because it's currently not used in the code.. -Sam
 
+async function addUser(u, p) {
+  let newUser = {
+    username: u,
+    password: p
+  }
+  await persistence.addUser(newUser)
+}
+
 async function verifiedUser(u, p) {
   let details = await persistence.getUserDetails(u);
   let hashedPass = createHash("sha512").update(p).digest("hex")  
@@ -23,6 +31,6 @@ async function deleteSession(key) {
 }
 
 module.exports = {
-  verifiedUser,
+  addUser, verifiedUser,
   startSession, getSession, deleteSession
 }
