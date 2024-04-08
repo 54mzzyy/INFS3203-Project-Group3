@@ -16,18 +16,27 @@ app.get('/', (req, res) => {
   res.render('login')
 })
 
-app.post('/', (req, res) => {
+app.post('/', async (req, res) => {
   let username = req.body.username
   let password = req.body.password
-  let verifiedUser = business.verifiedUser(username, password)
+  let verifiedUser = await business.verifiedUser(username, password)
   if(verifiedUser) {
     res.redirect('/home')
   }
   else {
-    res.render('invalid')
+    
   }
 })
 
+app.get('/register', (req, res) => {
+  res.render('register')
+})
+
+app.post('/register', async (req, res) => {
+  let username = req.body.username
+  let password = req.body.password
+  await business.addUser(username, password)
+})
 
 app.get('/home', (req, res) => {
   res.render('home')
@@ -53,9 +62,6 @@ app.get('/profile', (req, res) => {
   res.render('profile')
 })
 
-app.get('/register', (req, res) => {
-  res.render('register')
-})
 
 app.get('/logout', async (req,res) => {
   await business.deleteSession(req.cookies.session)
