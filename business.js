@@ -4,7 +4,8 @@ const crypto = require('crypto')
 async function addUser(u, p) {
   let newUser = {
     username: u,
-    password: p
+    password: p,
+    email: e
   }
   await persistence.addUser(newUser)
 }

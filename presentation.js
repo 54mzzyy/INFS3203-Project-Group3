@@ -35,7 +35,9 @@ app.get('/register', (req, res) => {
 app.post('/register', async (req, res) => {
   let username = req.body.username
   let password = req.body.password
-  await business.addUser(username, password)
+  let email = req.body.email
+  await business.addUser(username, password, email)
+  res.redirect('/login')
 })
 
 app.get('/home', (req, res) => {
