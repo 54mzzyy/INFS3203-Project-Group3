@@ -200,7 +200,7 @@ Team: Up to 4 students
 
 # **Requirements**
 - ## IDE: Visual Studio Code
-- ## Language(s): Javascript => [NodeJS, ExpressJS, Handlebars] & BootStrap CSS
+- ## Language(s): Javascript, HTML & BootStrap CSS
 - ## Framework: FLAME© (Original framework) => [MongoDB, ExpressJS, Handlebars, BootStrap-CSS, NodeJS]
 
 
