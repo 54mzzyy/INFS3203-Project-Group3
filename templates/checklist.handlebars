@@ -1,16 +1,40 @@
 <head>
   <title>Checklist</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+<div class="container">
 <h2>Checklist</h2>
 
 <ul id="checklist">
-  
 </ul>
-
 <input type="text" id="newTaskInput">
 <button onclick="addNewTask()">Add Task</button>
-
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-offset-4 col-sm-4">
+            <div class="checkbox-list">
+                <div class="checkbox">
+                    <input type="checkbox" id="checkbox1">
+                    <label for="checkbox1">One!</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="checkbox2" checked="">
+                    <label for="checkbox2">Two!</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="checkbox3">
+                    <label for="checkbox3">Three!</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="checkbox4" checked="">
+                    <label for="checkbox4">Four!</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script>
   function addNewTask() {
     var input = document.getElementById("newTaskInput");
