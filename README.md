@@ -1,7 +1,7 @@
 # INFS3203-Project-Group3
 
 # Members:
-**Bibi Aasiyaa Jaulim - 60102393 - [BibiAaasiyaa](https://github.com/BibiAasiyaa)**
+**Bibi Aasiyaa Jaulim - 60102393 - [BibiAasiyaa](https://github.com/BibiAasiyaa)**
 
 
 **Shouq Al-Sheeb - 60088665 - [60088665](https://github.com/60088665)**

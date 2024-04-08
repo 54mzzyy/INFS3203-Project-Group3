@@ -1,39 +1,37 @@
+<head>
+  <title>Checklist</title>
+</head>
 <body>
-    <header>
-        <h1>TourQ</h1>
+<h2>Checklist</h2>
 
-        <div>
-            <img src="user-picture.jpg" alt="User Picture" width="50" height="50">
-            <span>User Name</span>  <!-- {{username}}-->
-        </div>
+<ul id="checklist">
+  
+</ul>
 
-        <form action="/search" method="get">
-            <input type="text" id="search" name="search" placeholder="Search...">
-            <input type="submit" value="Search">
-        </form>
+<input type="text" id="newTaskInput">
+<button onclick="addNewTask()">Add Task</button>
 
-
-        <nav>
-            <ul>
-                <li><a href="/home">Home</a></li>
-                <li><a href="/map">Map</a></li>
-                <li><a href="/checklist">Checklist</a></li>
-                <li><a href="settings">Settings</a></li>
-            </ul>
-        </nav>
-    </header>
-        
-    <div class="container">
-        <div class="checklist">
-            <h2>My Checklist</h2>
-            <ul class="checklist-items">
-                <!-- Checklist will be dynamically added here -->
-            </ul>
-            <form class="add-checklist-item">
-                <input type="text" id="item-input" placeholder="Enter a new item">
-                <button type="button">Add Item</button>
-                
-            </form>
-        </div>
-    </div>
+<script>
+  function addNewTask() {
+    var input = document.getElementById("newTaskInput");
+    var taskName = input.value.trim();
+    if (taskName !== "") {
+      var ul = document.getElementById("checklist");
+      var li = document.createElement("li");
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.id = "task" + (ul.getElementsByTagName("li").length + 1);
+      checkbox.name = "task" + (ul.getElementsByTagName("li").length + 1);
+      var label = document.createElement("label");
+      label.htmlFor = checkbox.id;
+      label.appendChild(document.createTextNode(taskName));
+      li.appendChild(checkbox);
+      li.appendChild(label);
+      ul.appendChild(li);
+      input.value = ""; // Clear the input field
+    } else {
+      alert("Please enter a task name.");
+    }
+  }
+</script>
 </body>
