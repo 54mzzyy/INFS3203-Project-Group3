@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 app.post('/', async (req, res) => {
   let username = req.body.username
   let password = req.body.password
-  let verifiedUser = await business.verifiedUser(username, password)
+  let verifiedUser = await business.verifyUser(username, password)
   if(verifiedUser) {
     res.redirect('/home')
   }
