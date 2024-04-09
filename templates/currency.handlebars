@@ -1,21 +1,24 @@
-<html>
-    <head>
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- testinf perp -->
 
-        <title>Login Page</title>
-    
-        <!--Bootsrap 4 CDN-->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!--Bootsrap 4 CDN-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         
-        <!--Fontawesome CDN-->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <!--Fontawesome CDN-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-        <!--Custom styles-->
-        <link rel="stylesheet" type="text/css" href="styles.css">
+  <!--Custom styles-->
+  <link rel="stylesheet" type="text/css" href="styles.css">
 
-        <style>
+  <title>Currency Converter</title>
+  <style>
             body{
                 /*background-color: #19123B;*/
             }
@@ -147,59 +150,102 @@
                 }
             }
         </style>
-    </head>
-
+</head>
 <body>
-    <div class="containerLogin">
-        <div class="row d-flex justify-content-center mt-5">
-            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                <div class="card py-3 px-2">
-                    <p class="text-center mb-3 mt-2">Sign in with</p>
-                    <div class="row mx-auto ">
-                        <div class="col-4">
-                            <i class="fab fa-twitter"></i>
-                        </div>
-                        <div class="col-4">
-                            <i class="fab fa-facebook"></i>
-                        </div>
-                        <div class="col-4">
-                            <i class="fab fa-google"></i>
-                        </div>
-                    </div>
-                    <div class="division">
-                        <div class="row">
-                            <div class="col-3"><div class="line l"></div></div>
-                            <div class="col-6"><span>Have an account?</span></div>
-                            <div class="col-3"><div class="line r"></div></div>
-                        </div>
-                    </div>
-                    <form class="myform" method="post">
-                        <div class="form-group">
-                            <label for="username">Username:</label>
-                            <input type="text" class="form-control" name="username" placeholder="Username" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Password:</label>
-                            <input type="password" class="form-control" name="password" placeholder="Password" required>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 col-12">
-                                <div class="form-group form-check">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                    <label class="form-check-label" for="exampleCheck1">Stay Connected</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-12 bn"><a href="/forgot-password">Forgot password?</a></div>
-                        </div>
-                        <div class="form-group mt-3">
-                            <button type="submit" class="btn btn-block btn-primary btn-lg"><small><i class="far fa-user pr-2"></i>Login</small></button>
-                        </div>
-                        <div><p>Don't have an account? <a href="/register">Sign Up</a></p></div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
+{{!--   
+  <h1>Currency Converter</h1>
+  <div class="container">
+    <label for="amount">Amount:</label>
+  <input type="number" id="amount" placeholder="Enter amount">
 
+  <label for="fromCurrency">From:</label>
+  <select id="fromCurrency">
+    <option value="USD">USD</option>
+    <option value="EUR">EUR</option>
+    <option value="GBP">GBP</option>
+    <option value="QAR">QAR</option>
+    <!-- Add more currencies here -->
+  </select>
+
+  <label for="toCurrency">To:</label>
+  <select id="toCurrency">
+    <option value="USD">USD</option>
+    <option value="EUR">EUR</option>
+    <option value="GBP">GBP</option>
+    <option value="QAR">QAR</option>
+    <!-- Add more currencies here -->
+  </select>
+
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+  </div> --}}
+
+<div class="containerLogin">
+  <div class="row d-flex justify-content-center mt-5">
+    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+      <div class="card py-3 px-2">
+        <h1>Currency Converter</h1>
+        <div class="division"></div>
+
+        
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" placeholder="Enter amount">
+        <label for="fromCurrency">From:</label>
+        <select id="fromCurrency">
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="GBP">GBP</option>
+          <option value="QAR">QAR</option>
+          <!-- Add more currencies here -->
+        </select>
+
+        <label for="toCurrency">To:</label>
+        <select id="toCurrency">
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="GBP">GBP</option>
+          <option value="QAR">QAR</option>
+          <!-- Add more currencies here -->
+        </select>
+        <div class="division"></div>
+
+        <button onclick="convert()">Convert</button>
+        
+        <p id="result"></p>
+
+         </div>
+         </div>     
+
+      </div>
+    </div>  
+</div>
+
+  <script>
+    // Define currency exchange rates
+    const exchangeRates = {
+      USD: 1,
+      EUR: 0.83,
+      GBP: 0.72,
+      QAR: 3.64,
+      JPY: 109.47,
+      AUD: 1.31,
+      CAD: 1.25,
+      CHF: 0.92
+    };
+
+    // Function to convert from one currency to another
+    function convert() {
+      const amount = parseFloat(document.getElementById('amount').value);
+      const fromCurrency = document.getElementById('fromCurrency').value;
+      const toCurrency = document.getElementById('toCurrency').value;
+
+      if (exchangeRates[fromCurrency] && exchangeRates[toCurrency]) {
+        const convertedAmount = (amount / exchangeRates[fromCurrency]) * exchangeRates[toCurrency];
+        document.getElementById('result').textContent = `${amount} ${fromCurrency} equals ${convertedAmount.toFixed(2)} ${toCurrency}`;
+      } else {
+        document.getElementById('result').textContent = "Invalid currency";
+      }
+    }
+  </script>
+</body>
 </html>

@@ -1,21 +1,25 @@
 const persistence = require('./persistence')
-const { createHash, /*randomUUID*/ } = require("node:crypto") 
-// commented out randomUUID because it's currently not used in the code.. -Sam
+const crypto = require('crypto')
 
 async function addUser(u, p) {
   let newUser = {
     username: u,
-    password: p
+    password: p,
+    email: e
   }
   await persistence.addUser(newUser)
 }
 
-async function verifiedUser(u, p) {
-  let details = await persistence.getUserDetails(u);
-  let hashedPass = createHash("sha512").update(p).digest("hex")  
-  if (details == undefined || details.password != hashedPass) {
-    return undefined;
-  }
+async function verifyUser(user, pass) {
+  let encryptedpass = await hashPassword(pass)
+  return await persistence.verifyUser(user, encryptedpass)
+}
+
+async function hashPassword(pass) {
+  let hash = crypto.createHash('sha512')
+  hash.update(pass)
+  let encryptedpass = hash.digest('hex')
+  return encryptedpass
 }
 
 async function startSession(key) {
@@ -30,7 +34,11 @@ async function deleteSession(key) {
  await persistence.deleteSession(key)
 }
 
+async function getUserDetails(username) {
+  return await persistence.getUserDetails(username)
+}
+
 module.exports = {
-  addUser, verifiedUser,
-  startSession, getSession, deleteSession
+  addUser, verifyUser,
+  startSession, getSession, deleteSession, getUserDetails
 }

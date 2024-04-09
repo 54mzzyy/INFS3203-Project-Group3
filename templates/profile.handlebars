@@ -8,6 +8,7 @@
         width: 80%;
         margin: auto;
         padding: 20px;
+        padding-bottom: 230px;
         box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
         background-color: #fff;
         border-radius: 10px;
@@ -63,17 +64,19 @@
         <h1>Your Profile</h1>
         <div class="profile-info">
             <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Profile-512.png" alt="profile picture" height="15%" width="15%">
-            <h2>GeneratedUsername</h2>
-            <p>GeneratedEmail</p><br>
-            <p>Joined since:</p><br>
-            <p>GeneratedJoinDate</p>
+            <h2>{{ username }}</h2>
+            <p>{{ email }}</p><br>
         </div>
         <div class="tourism-info">
             <h2>Your Trips</h2>
             <ul>
-                <li>Generated Trips</li>
-                <li>Generated Trips</li>
-                <li>Generated Trips</li>
+                {{#each trips}}
+                    <li>
+                        <h3>{{this.destination}}</h3>
+                        <p>Date: {{this.date}}</p>
+                        <p>Duration: {{this.duration}} days</p>
+                    </li>
+                {{/each}}
             </ul>
         </div>
     </div>
