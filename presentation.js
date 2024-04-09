@@ -64,12 +64,11 @@ app.get('/profile', (req, res) => {
   res.render('profile')
 })
 
-app.get('/trips', (req, res) => {
-  res.render('trips')
-})
-
-app.post('/trips', async (req, res) => {
-  await business.generateTrips()
+app.get('/trips', async (req, res) => {
+  let trips = await business.generateTrips()
+  res.render('trips', {
+    trips: trips
+  })
 })
 
 app.get('/logout', async (req,res) => {
