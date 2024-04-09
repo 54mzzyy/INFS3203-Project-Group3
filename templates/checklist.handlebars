@@ -68,6 +68,11 @@
         .checkbox{ margin: 0 0 20px; }
     }
     @import url('https://fonts.googleapis.com/css2?family=Unna&display=swap');
+    .containerCL h2{
+      font-family: 'Unna', serif;
+      text-align: left;
+      padding-top: 18px;
+    }
 
     h3{
       font-family: 'Gabriola', Times, serif;
@@ -75,12 +80,12 @@
       font-size: 40px;
       color: rgb(132, 94, 6);
     }
-    h5{
+    #ctitle{
       text-align: left;
       font-style: italic;
       color: #000;
     }
-    ul {
+    .card-body ul {
         padding-left: 1rem;
         text-align: left;
         color: #000;
@@ -144,8 +149,8 @@
 </head>
 <body>
 <div class="container">
-    <h2>Checklist</h2>
   <div class="containerCL">
+    <h2>Checklist</h2>
     <ul id="checklist">
     </ul>
     {{!-- <button onclick="createChecklist()" class="taskbtn">Create Checklist</button><br><br> --}}
