@@ -68,6 +68,10 @@ app.get('/trips', (req, res) => {
   res.render('trips')
 })
 
+app.get('/currency', (req, res) => {
+  res.render('currency')
+})
+
 app.get('/logout', async (req,res) => {
   await business.deleteSession(req.cookies.session)
   res.redirect('/')
