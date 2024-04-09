@@ -22,8 +22,7 @@
 
       .nav-link:hover,
       .nav-link:active {
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Adjust shadow color and size as needed */
-        transition: box-shadow 0.3s ease; /* Add a smooth transition effect */
+        text-decoration: underline;
       }
 
     .about{
@@ -133,7 +132,7 @@
       .card {
         background-color: white;
         border-radius: 0.25rem;
-        box-shadow: 0 20px 40px -14px rgba(0,0,0,0.5);
+        box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
         display: flex;
         flex-direction: column;
         overflow: hidden;
@@ -522,7 +521,7 @@
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="/login">Log out</a></li>
+              <li><a class="dropdown-item" href="/">Log out</a></li>
             </ul>
           </li>
           {{!-- profile pic --}}
@@ -574,7 +573,7 @@
           padding-top: 0px;
           padding-bottom: 0px;">
           Planned Suggested Trips</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link"
+        <li class="nav-item mb-2"><a href="/trip" class="nav-link"
         style="
           padding-left: 0px;
           padding-right: 0px;
