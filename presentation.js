@@ -52,16 +52,28 @@ app.get('/home', async (req, res) => {
     }
 })
 
-app.get('/map', (req, res) => {
-  res.render('map')
+app.get('/map', async (req, res) => {
+  let sessionData = await business.getSessionData(req.cookies.session)
+    if(sessionData) {
+        res.render('map')
+    }
+    else {
+        res.redirect('/')
+    }
 })
 
 app.get('/map/:option', (req, res) => {
   res.render('map_food')
 })
 
-app.get('/checklist', (req, res) => {
-  res.render('checklist')
+app.get('/checklist', async (req, res) => {
+  let sessionData = await business.getSessionData(req.cookies.session)
+    if(sessionData) {
+        res.render('checklist')
+    }
+    else {
+        res.redirect('/')
+    }
 })
 
 app.get('/language', (req, res) => {
@@ -73,14 +85,23 @@ app.get('/profile', (req, res) => {
 })
 
 app.get('/trips', async (req, res) => {
-  let trips = await business.generateTrips()
-  res.render('trips', {
-    trips: trips
-  })
+  let sessionData = await business.getSessionData(req.cookies.session)
+    if(sessionData) {
+        res.render('trips')
+    }
+    else {
+        res.redirect('/')
+    }
 })
 
-app.get('/currency', (req, res) => {
-  res.render('currency')
+app.get('/currency', async (req, res) => {
+  let sessionData = await business.getSessionData(req.cookies.session)
+    if(sessionData) {
+        res.render('currency')
+    }
+    else {
+        res.redirect('/')
+    }
 })
 
 app.get('/logout', async (req,res) => {
