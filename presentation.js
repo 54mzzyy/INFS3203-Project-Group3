@@ -79,6 +79,10 @@ app.get('/trips', async (req, res) => {
   })
 })
 
+app.get('/currency', (req, res) => {
+  res.render('currency')
+})
+
 app.get('/logout', async (req,res) => {
   await business.deleteSession(req.cookies.session)
   res.redirect('/')
