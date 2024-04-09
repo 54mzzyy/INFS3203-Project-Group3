@@ -21,6 +21,8 @@ app.post('/', async (req, res) => {
   let password = req.body.password
   let verifiedUser = await business.verifyUser(username, password)
   if(verifiedUser) {
+    let sessionData = await business.startSession({data: username})
+    res.cookie('session', sessionData.sessionNumber, {expires: sessionData.expiry})
     res.redirect('/home')
   }
   else {
@@ -40,20 +42,38 @@ app.post('/register', async (req, res) => {
   res.redirect('/login')
 })
 
-app.get('/home', (req, res) => {
-  res.render('home')
+app.get('/home', async (req, res) => {
+  let sessionData = await business.getSessionData(req.cookies.session)
+    if(sessionData) {
+        res.render('home')
+    }
+    else {
+        res.redirect('/')
+    }
 })
 
-app.get('/map', (req, res) => {
-  res.render('map')
+app.get('/map', async (req, res) => {
+  let sessionData = await business.getSessionData(req.cookies.session)
+    if(sessionData) {
+        res.render('map')
+    }
+    else {
+        res.redirect('/')
+    }
 })
 
 app.get('/map/:option', (req, res) => {
   res.render('map_food')
 })
 
-app.get('/checklist', (req, res) => {
-  res.render('checklist')
+app.get('/checklist', async (req, res) => {
+  let sessionData = await business.getSessionData(req.cookies.session)
+    if(sessionData) {
+        res.render('checklist')
+    }
+    else {
+        res.redirect('/')
+    }
 })
 
 app.get('/language', (req, res) => {
@@ -64,12 +84,24 @@ app.get('/profile', (req, res) => {
   res.render('profile')
 })
 
-app.get('/trips', (req, res) => {
-  res.render('trips')
+app.get('/trips', async (req, res) => {
+  let sessionData = await business.getSessionData(req.cookies.session)
+    if(sessionData) {
+        res.render('trips')
+    }
+    else {
+        res.redirect('/')
+    }
 })
 
-app.get('/currency', (req, res) => {
-  res.render('currency')
+app.get('/currency', async (req, res) => {
+  let sessionData = await business.getSessionData(req.cookies.session)
+    if(sessionData) {
+        res.render('currency')
+    }
+    else {
+        res.redirect('/')
+    }
 })
 
 app.get('/logout', async (req,res) => {
