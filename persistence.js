@@ -41,14 +41,12 @@ async function getUserDetails(username) {
 
 async function startSession(session_data) {
     await connectDatabase()
-    let db = client.db('assignment3')
     let sessions = db.collection('sessions')
     await sessions.insertOne(session_data)
 }
 
 async function getSession(session_id) {
     await connectDatabase()
-    let db = client.db('assignment3')
     let sessions = db.collection('sessions')
     let result = await sessions.find({sessionNumber: session_id})
     let resultData = await result.toArray()
@@ -57,7 +55,6 @@ async function getSession(session_id) {
 
 async function deleteSession(session_id) {
     await connectDatabase()
-    let db = client.db('assignment3')
     let sessions = db.collection('sessions')
     sessions.deleteOne({sessionNumber: session_id})
 }
