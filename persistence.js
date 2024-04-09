@@ -12,7 +12,6 @@ async function connectDatabase() {
     }
 }
 
-
 async function addUser(newUser) {
     await connectDatabase()
     let users = db.collection("user")
