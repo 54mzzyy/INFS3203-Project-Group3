@@ -64,6 +64,10 @@ app.get('/profile', (req, res) => {
   res.render('profile')
 })
 
+app.get('/trips', (req, res) => {
+  res.render('trips')
+})
+
 
 app.get('/logout', async (req,res) => {
   await business.deleteSession(req.cookies.session)
