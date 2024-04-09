@@ -22,11 +22,18 @@ async function hashPassword(pass) {
   return encryptedpass
 }
 
-async function startSession(key) {
-  await persistence.startSession(key)
+async function startSession(data) {
+  let sessionId = crypto.randomUUID()
+  let sessionData = {
+      sessionNumber: sessionId,
+      expiry: new Date(Date.now() + 1000*60),
+      data: data
+  }
+  await persistence.startSession(sessionData)
+  return sessionData
 }
 
-async function getSession(key) {
+async function getSessionData(key) {
   return await persistence.getSession(key)
 }
 
@@ -40,5 +47,5 @@ async function getUserDetails(username) {
 
 module.exports = {
   addUser, verifyUser,
-  startSession, getSession, deleteSession, getUserDetails
+  startSession, getSessionData, deleteSession, getUserDetails
 }
