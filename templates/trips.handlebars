@@ -26,6 +26,13 @@
       color: #333;
     }
 
+    @import url('https://fonts.googleapis.com/css2?family=Unna&display=swap');
+    .containerTrip h2{
+      font-family: 'Unna', serif;
+      text-align: left;
+      padding-top: 18px;
+    }
+
     .trip-card {
       background-color: #fff;
       border-radius: 8px;
@@ -84,12 +91,26 @@
       border: 1px solid #ccc;
       border-radius: 5px;
     }
+
+    .modal-content{
+
+    }
+
+    #destination, #dates{
+        border: 1px solid #ccc; 
+        border-radius: 5px; 
+        padding: 8px; 
+        margin-right: 10px;
+        width: 70%;
+    }
   </style>
 </head>
 
 <body>
-  <div class="container">
+    <div class="container">
+    <div class="containerTrip">
     <h2>Trip Planner for Qatarstaycation</h2>
+    </div>
 
     <!-- Trip Cards Container -->
     <div id="trip-cards-container">
@@ -101,15 +122,15 @@
 
     <!-- Modal for Adding New Trip -->
     <div id="addTripModal" class="modal">
-      <div class="modal-content">
+      <div class="container">
         <span class="close" onclick="closeModal()">&times;</span>
         <h2>Add New Trip</h2>
         <div class="input-group">
-          <label for="destination">Destination:</label>
+          <label for="destination">Destination:</label><br>
           <input type="text" id="destination" placeholder="Enter destination">
         </div>
         <div class="input-group">
-          <label for="dates">Dates:</label>
+          <label for="dates">Dates:</label><br>
           <input type="text" id="dates" placeholder="Enter dates">
         </div>
         <div class="input-group">
