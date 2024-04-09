@@ -26,7 +26,7 @@ async function startSession(key) {
   await persistence.startSession(key)
 }
 
-async function getSession(key) {
+async function getSessionData(key) {
   return await persistence.getSession(key)
 }
 
@@ -40,5 +40,5 @@ async function getUserDetails(username) {
 
 module.exports = {
   addUser, verifyUser,
-  startSession, getSession, deleteSession, getUserDetails
+  startSession, getSessionData, deleteSession, getUserDetails
 }

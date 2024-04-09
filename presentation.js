@@ -21,6 +21,8 @@ app.post('/', async (req, res) => {
   let password = req.body.password
   let verifiedUser = await business.verifyUser(username, password)
   if(verifiedUser) {
+    let sessionData = await business.startSession({data: username})
+    res.cookie('session', sessionData.sessionNumber, {expires: sessionData.expiry})
     res.redirect('/home')
   }
   else {
@@ -40,8 +42,14 @@ app.post('/register', async (req, res) => {
   res.redirect('/login')
 })
 
-app.get('/home', (req, res) => {
-  res.render('home')
+app.get('/home', async (req, res) => {
+  let sessionData = await business.getSessionData(req.cookies.session)
+    if(sessionData) {
+        res.render('home')
+    }
+    else {
+        res.redirect('/')
+    }
 })
 
 app.get('/map', (req, res) => {
