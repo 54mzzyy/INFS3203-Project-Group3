@@ -19,8 +19,8 @@
 
   <title>Currency Converter</title>
   <style>
-            body{
-                /*background-color: #19123B;*/
+            .containerCC{
+                padding: 100px;
             }
             .containerLogin{
                 padding-bottom: 100px;
@@ -34,6 +34,7 @@
             .containerLogin p{
                 font-weight: 600;
                 font-size: 15px;
+                text-align: center;
             }
             .containerLogin .fab{
                 display: flex;
@@ -149,6 +150,23 @@
                     width: 50%;
                 }
             }
+            select {
+                    padding: 4px 10px;
+                    border: 1px solid #5b2c2c;
+                    border-radius: 2px;
+                    background-color: #ffffff;
+                    color: #000000;
+                    appearance: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                }
+
+                select:focus {
+                    border-color: #57557A;
+                    outline: none;
+                    background-color: rgba(169, 75, 75, 0.25);
+                }
+           
         </style>
 </head>
 <body>
@@ -184,12 +202,13 @@
   <div class="row d-flex justify-content-center mt-5">
     <div class="col-12 col-md-8 col-lg-6 col-xl-5">
       <div class="card py-3 px-2">
-        <h1>Currency Converter</h1>
-        <div class="division"></div>
+        <p class="text-center mb-3 mt-2">Currency Converter</p>
+        <div class="divisionCC">
 
         
         <label for="amount">Amount:</label>
-        <input type="number" id="amount" placeholder="Enter amount">
+        <input type="number" id="amount" placeholder="Enter amount" class="form-control">
+    
         <label for="fromCurrency">From:</label>
         <select id="fromCurrency">
           <option value="USD">USD</option>
@@ -198,7 +217,7 @@
           <option value="QAR">QAR</option>
           <!-- Add more currencies here -->
         </select>
-
+         
         <label for="toCurrency">To:</label>
         <select id="toCurrency">
           <option value="USD">USD</option>
@@ -207,10 +226,10 @@
           <option value="QAR">QAR</option>
           <!-- Add more currencies here -->
         </select>
-        <div class="division"></div>
-
-        <button onclick="convert()">Convert</button>
-        
+        </div>
+        <div class="form-group mt-3">   
+        <button onclick="convert()" class="btn btn-block btn-primary btn-lg"><small>Convert</small></button>
+        </div>
         <p id="result"></p>
 
          </div>
@@ -241,7 +260,7 @@
 
       if (exchangeRates[fromCurrency] && exchangeRates[toCurrency]) {
         const convertedAmount = (amount / exchangeRates[fromCurrency]) * exchangeRates[toCurrency];
-        document.getElementById('result').textContent = `${amount} ${fromCurrency} equals ${convertedAmount.toFixed(2)} ${toCurrency}`;
+        document.getElementById('result').textContent = `${amount} ${fromCurrency} = ${convertedAmount.toFixed(2)} ${toCurrency}`;
       } else {
         document.getElementById('result').textContent = "Invalid currency";
       }
