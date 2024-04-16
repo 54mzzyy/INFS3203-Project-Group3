@@ -1,23 +1,354 @@
 <head>
   <title>Checklist</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .checkbox-list{
+        color: #000000;
+        background: linear-gradient(#3a7bd5, #3a6073);
+        padding: 25px;
+        border-radius: 10px;
+    }
+    .checkbox{
+        border-bottom: 1px dashed rgba(0, 0, 0, 0.5);
+        padding: 5px 5px 9px 5px;
+        margin: 0 0 10px;
+        display: block;
+    }
+    .checkbox input[type=checkbox]{
+        margin: 0;
+        visibility: hidden;
+        left: 1px;
+        top: 1px;
+    }
+    .checkbox label{
+        font-size: 18px;
+        line-height: 19px;
+        padding-left: 35px;
+        margin: 0;
+        display: block;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.3s ease 0s;
+        font-family: "MV Boli", Times, serif;
+    }
+    .checkbox label:before,
+    .checkbox label:after{
+        content: "";
+        width: 20px;
+        height: 20px;
+        border: 3px solid rgba(0, 0, 0, 0.5);
+        border-radius: 4px;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        transition: all 0.25s;
+    }
+    .checkbox label:after{
+        height: 10px;
+        width: 16px;
+        border-radius: 0 0 0 4px;
+        border: 5px solid #000000;
+        border-top: none;
+        border-right: none;
+        opacity: 0;
+        transform: rotate(-45deg);
+        top: 15px;
+        left: 6px;
+    }
+    .checkbox input[type=checkbox]:checked+label{ font-weight: 600; }
+    .checkbox input[type=checkbox]:checked+label:before{
+        opacity: 0;
+        top: -10px;
+    }
+    .checkbox input[type=checkbox]:checked+label:after{
+        opacity: 1;
+        top: 6px;
+    }
+    @media only screen and (max-width:767px){
+        .checkbox{ margin: 0 0 20px; }
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Unna&display=swap');
+    .containerCL h2{
+      font-family: 'Unna', serif;
+      text-align: left;
+      padding-top: 18px;
+    }
+
+    h3{
+      font-family: 'Gabriola', Times, serif;
+      text-align: center;
+      font-size: 40px;
+      color: rgb(132, 94, 6);
+    }
+    #ctitle{
+      text-align: left;
+      font-style: italic;
+      color: #000;
+    }
+    .card-body ul {
+        padding-left: 1rem;
+        text-align: left;
+        color: #000;
+    }
+    #ctitle{
+      color: #000;
+    }
+    .maroon {
+      //background-color: #401919;
+      //background: linear-gradient(135deg,  rgb(69 12 12) 39%, rgb(129 68 68) 101%);
+      background: linear-gradient(135deg, rgb(255, 253, 208) 45%, rgb(255, 253, 208) 101%);
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      color: #fff;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .maroon .checkbox {
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.5);
+    }
+
+    .maroon .checkbox input[type="checkbox"]:checked+label {
+      text-decoration: line-through;
+      color: rgb(231, 32, 32);
+    }
+    .containerCL{
+      text-align: left;
+      font-size: 13px;
+    }
+    .taskbtn{
+      background-color: #800000; 
+      color: #fff; 
+      border: none;
+      border-radius: 5px; 
+      padding: 10px 20px; 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s, color 0.3s;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Amaze&display=swap');
+    .taskbtn:hover {
+      background-color: #1372f7; 
+      color: #fff; 
+      font-family: 'Amaze', sans-serif;
+    }
+    
+    #newTaskInput {
+      border: 1px solid #ccc; 
+      border-radius: 5px; 
+      padding: 8px; 
+      margin-right: 10px;
+      width: 25%;
+    }
+    #newTitleInput{
+      border: 1px solid #ccc; 
+      border-radius: 5px; 
+      padding: 8px; 
+      margin-right: 10px;
+      width: 25%;
+    }
+  </style>
 </head>
 <body>
-<h2>Checklist</h2>
+<div class="container">
+  <div class="containerCL">
+    <h2>Checklist</h2>
+    <ul id="checklist">
+    </ul>
+    {{!-- <button onclick="createChecklist()" class="taskbtn">Create Checklist</button><br><br> --}}
+    <input type="text" id="newTitleInput" placeholder="Enter title name">
+    <button onclick="addNewTitle()" class="taskbtn">Add Title</button><br><br>
+    <input type="text" id="newTaskInput" placeholder="Enter task">
+    <button onclick="addNewTask()" class="taskbtn">Add Task</button>
+  </div>
+  </div>
 
-<ul id="checklist">
-  
-</ul>
+  <div id="checklistContainer" class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card maroon">
+          <div class="card-body">
+            <h5 class="card-title" id="ctitle">Checklist 1</h5>
+            <h3>Discover Modern Qatar</h3>
+            <ul id="checklist1">
+              <li class="checkbox">
+                <input type="checkbox" id="checkbox1">
+                <label for="checkbox1">Explore West Bay's skyscrapers: Torch Doha &amp; The Pearl-Qatar!</label>
+              </li>
+              <li class="checkbox">
+                <input type="checkbox" id="checkbox2" checked>
+                <label for="checkbox2">Check out Education City's futuristic buildings!</label>
+              </li>
+              <li class="checkbox">
+                <input type="checkbox" id="checkbox3">
+                <label for="checkbox3">Shop at Villaggio &amp; Doha Festival City malls!</label>
+              </li>
+              <li class="checkbox">
+                <input type="checkbox" id="checkbox4" checked>
+                <label for="checkbox4">Party at The Pearl-Qatar or Katara Cultural Village!</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-<input type="text" id="newTaskInput">
-<button onclick="addNewTask()">Add Task</button>
+      <div class="col-sm-4">
+        <div class="card maroon">
+          <div class="card-body">
+            <h5 class="card-title" id="ctitle">Checklist 2</h5>
+            <h3>Taste Culinary Delights</h3>
+            <ul id="checklist1">
+              <li class="checkbox">
+                <input type="checkbox" id="checkbox01">
+                <label for="checkbox01">Try Qatari dishes: Machboos &amp; Harees!</label>
+              </li>
+              <li class="checkbox">
+                <input type="checkbox" id="checkbox02">
+                <label for="checkbox02">Taste Arabic sweets at Karak tea stalls!</label>
+              </li>
+              <li class="checkbox">
+                <input type="checkbox" id="checkbox03">
+                <label for="checkbox03">Feast on seafood with a Corniche view!</label>
+              </li>
+              <li class="checkbox">
+                <input type="checkbox" id="checkbox04" checked>
+                <label for="checkbox04">Visit Souq Waqif's Spice Market for spices!</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-<script>
+      <div class="col-sm-4">
+        <div class="card maroon">
+          <div class="card-body">
+            <h5 class="card-title" id="ctitle">Checklist 3</h5>
+            <ul id="checklist3">
+                <h3></h3>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+  {{!-- function createChecklist() {
+    var checklistCount = localStorage.getItem("checklistCount");
+    if (!checklistCount) {
+      checklistCount = 0;
+    }
+    checklistCount++;
+    localStorage.setItem("checklistCount", checklistCount);
+    createNewChecklist();
+  }
+
+  function createNewChecklist() {
+    var checklistCount = localStorage.getItem("checklistCount");
+    if (checklistCount) {
+      var newChecklistCount = parseInt(checklistCount);
+      var newChecklistTitle = "Checklist " + newChecklistCount;
+
+      // Create a new checklist card
+      var checklistContainer = document.getElementById("checklistContainer");
+      var newChecklistCard = document.createElement("div");
+      newChecklistCard.className = "col-sm-4";
+      newChecklistCard.innerHTML = `
+        <div class="card maroon">
+          <div class="card-body">
+            <h5 class="card-title" id="ctitle">${newChecklistTitle}</h5>
+            <h3></h3>
+            <ul id="checklist${newChecklistCount}">
+            </ul>
+          </div>
+        </div>
+      `;
+      checklistContainer.appendChild(newChecklistCard);
+
+      // Clear the checklist title
+      localStorage.removeItem("checklistTitle_" + newChecklistCount);
+
+      // Clear the checklist items
+      localStorage.removeItem("checklistItems_" + newChecklistCount);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    loadExistingChecklists();
+    loadTitleFromLocalStorage();
+    loadFromLocalStorage();
+  }); --}}
+
+  // Function to load existing checklists from local storage
+  {{!-- function loadExistingChecklists() {
+    var checklistCount = localStorage.getItem("checklistCount");
+    if (checklistCount) {
+      for (var i = 1; i <= checklistCount; i++) {
+        var newChecklistTitle = localStorage.getItem("checklistTitle_" + i);
+        if (newChecklistTitle) {
+          var checklistContainer = document.getElementById("checklistContainer");
+          var newChecklistCard = document.createElement("div");
+          newChecklistCard.className = "col-sm-4";
+          newChecklistCard.innerHTML = `
+            <div class="card maroon">
+              <div class="card-body">
+                <h5 class="card-title" id="ctitle">${newChecklistTitle}</h5>
+                <h3></h3>
+                <ul id="checklist${i}">
+                </ul>
+              </div>
+            </div>
+          `;
+          checklistContainer.appendChild(newChecklistCard);
+        }
+      }
+    }
+  } --}}
+
+  // Rest of the functions go here...
+   function addNewTitle() {
+    var input = document.getElementById("newTitleInput");
+    var titleName = input.value.trim();
+    if (titleName !== "") {
+        var checklist3 = document.querySelector("#checklist3 h3"); // Select the existing h3 element
+        checklist3.textContent = titleName; // Update its text content
+        input.value = ""; // Clear the input field
+        
+        // Save the title to localStorage
+        saveTitleToLocalStorage(titleName);
+    } else {
+        alert("Please enter a title.");
+    }
+  }
+
+  // Function to save the title to localStorage
+  function saveTitleToLocalStorage(titleName) {
+      var checklistCount = localStorage.getItem("checklistCount");
+      if (!checklistCount) {
+        checklistCount = 0;
+      }
+      localStorage.setItem("checklistTitle_" + checklistCount, titleName);
+  }
+
+  // Function to load the title from localStorage
+  function loadTitleFromLocalStorage() {
+      var checklistCount = localStorage.getItem("checklistCount");
+      if (checklistCount) {
+          var title = localStorage.getItem("checklistTitle_" + checklistCount);
+          if (title) {
+              var checklist3 = document.querySelector("#checklist3 h3");
+              checklist3.textContent = title;
+          }
+      }
+  }
+
+  // Function to add a new task to checklist3
   function addNewTask() {
     var input = document.getElementById("newTaskInput");
     var taskName = input.value.trim();
     if (taskName !== "") {
-      var ul = document.getElementById("checklist");
+      var ul = document.getElementById("checklist3");
       var li = document.createElement("li");
+      li.classList.add("checkbox");
       var checkbox = document.createElement("input");
       checkbox.type = "checkbox";
       checkbox.id = "task" + (ul.getElementsByTagName("li").length + 1);
@@ -25,13 +356,213 @@
       var label = document.createElement("label");
       label.htmlFor = checkbox.id;
       label.appendChild(document.createTextNode(taskName));
+      label.classList.add("checkbox-label");
+      var span = document.createElement("span");
+      span.classList.add("checkbox-custom");
+      label.prepend(span);
       li.appendChild(checkbox);
       li.appendChild(label);
       ul.appendChild(li);
       input.value = ""; // Clear the input field
+
+      // Save the checklist item to localStorage
+      saveToLocalStorage(taskName);
     } else {
       alert("Please enter a task name.");
     }
   }
+
+  // Function to save checklist item to localStorage
+  function saveToLocalStorage(taskName) {
+    var checklistCount = localStorage.getItem("checklistCount");
+    if (!checklistCount) {
+      checklistCount = 0;
+    }
+    var checklistItems = localStorage.getItem("checklistItems_" + checklistCount);
+    if (!checklistItems) {
+      checklistItems = [];
+    } else {
+      checklistItems = JSON.parse(checklistItems);
+    }
+    checklistItems.push(taskName);
+    localStorage.setItem("checklistItems_" + checklistCount, JSON.stringify(checklistItems));
+  }
+
+  // Function to load checklist items from localStorage
+  function loadFromLocalStorage() {
+    var checklistCount = localStorage.getItem("checklistCount");
+    if (checklistCount) {
+      var checklistItems = localStorage.getItem("checklistItems_" + checklistCount);
+      if (checklistItems) {
+        checklistItems = JSON.parse(checklistItems);
+        var ul = document.getElementById("checklist3");
+        checklistItems.forEach(function(item) {
+          var li = document.createElement("li");
+          li.classList.add("checkbox");
+          var checkbox = document.createElement("input");
+          checkbox.type = "checkbox";
+          checkbox.id = "task" + (ul.getElementsByTagName("li").length + 1);
+          checkbox.name = "task" + (ul.getElementsByTagName("li").length + 1);
+          var label = document.createElement("label");
+          label.htmlFor = checkbox.id;
+          label.appendChild(document.createTextNode(item));
+          label.classList.add("checkbox-label");
+          var span = document.createElement("span");
+          span.classList.add("checkbox-custom");
+          label.prepend(span);
+          li.appendChild(checkbox);
+          li.appendChild(label);
+          ul.appendChild(li);
+        });
+      }
+    }
+  }
+
 </script>
+
+{{!-- <script>
+
+  // Function to create a new checklist
+  function createChecklist() {
+    var checklistCount = localStorage.getItem("checklistCount");
+    if (!checklistCount) {
+      checklistCount = 0;
+    }
+    checklistCount++;
+    localStorage.setItem("checklistCount", checklistCount);
+    createNewChecklist();
+  }
+
+  // Function to create a new checklist without clearing existing data
+  function createNewChecklist() {
+    var checklistCount = localStorage.getItem("checklistCount");
+    if (checklistCount) {
+      var newChecklistCount = parseInt(checklistCount);
+      var newChecklistTitle = "Checklist " + newChecklistCount;
+      localStorage.setItem("checklistTitle_" + newChecklistCount, newChecklistTitle);
+      location.reload(); // Reload the page to load the new checklist
+    }
+  }
+
+  // Call clearChecklistData function when the page is loaded
+  document.addEventListener("DOMContentLoaded", function() {
+    loadTitleFromLocalStorage();
+    loadFromLocalStorage();
+  });
+
+  function addNewTitle() {
+    var input = document.getElementById("newTitleInput");
+    var titleName = input.value.trim();
+    if (titleName !== "") {
+        var checklist3 = document.querySelector("#checklist3 h3"); // Select the existing h3 element
+        checklist3.textContent = titleName; // Update its text content
+        input.value = ""; // Clear the input field
+        
+        // Save the title to localStorage
+        saveTitleToLocalStorage(titleName);
+    } else {
+        alert("Please enter a title.");
+    }
+  }
+
+  // Function to save the title to localStorage
+  function saveTitleToLocalStorage(titleName) {
+      var checklistCount = localStorage.getItem("checklistCount");
+      if (!checklistCount) {
+        checklistCount = 0;
+      }
+      localStorage.setItem("checklistTitle_" + checklistCount, titleName);
+  }
+
+  // Function to load the title from localStorage
+  function loadTitleFromLocalStorage() {
+      var checklistCount = localStorage.getItem("checklistCount");
+      if (checklistCount) {
+          var title = localStorage.getItem("checklistTitle_" + checklistCount);
+          if (title) {
+              var checklist3 = document.querySelector("#checklist3 h3");
+              checklist3.textContent = title;
+          }
+      }
+  }
+
+  // Function to add a new task to checklist3
+  function addNewTask() {
+    var input = document.getElementById("newTaskInput");
+    var taskName = input.value.trim();
+    if (taskName !== "") {
+      var ul = document.getElementById("checklist3");
+      var li = document.createElement("li");
+      li.classList.add("checkbox");
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.id = "task" + (ul.getElementsByTagName("li").length + 1);
+      checkbox.name = "task" + (ul.getElementsByTagName("li").length + 1);
+      var label = document.createElement("label");
+      label.htmlFor = checkbox.id;
+      label.appendChild(document.createTextNode(taskName));
+      label.classList.add("checkbox-label");
+      var span = document.createElement("span");
+      span.classList.add("checkbox-custom");
+      label.prepend(span);
+      li.appendChild(checkbox);
+      li.appendChild(label);
+      ul.appendChild(li);
+      input.value = ""; // Clear the input field
+
+      // Save the checklist item to localStorage
+      saveToLocalStorage(taskName);
+    } else {
+      alert("Please enter a task name.");
+    }
+  }
+
+  // Function to save checklist item to localStorage
+  function saveToLocalStorage(taskName) {
+    var checklistCount = localStorage.getItem("checklistCount");
+    if (!checklistCount) {
+      checklistCount = 0;
+    }
+    var checklistItems = localStorage.getItem("checklistItems_" + checklistCount);
+    if (!checklistItems) {
+      checklistItems = [];
+    } else {
+      checklistItems = JSON.parse(checklistItems);
+    }
+    checklistItems.push(taskName);
+    localStorage.setItem("checklistItems_" + checklistCount, JSON.stringify(checklistItems));
+  }
+
+  // Function to load checklist items from localStorage
+  function loadFromLocalStorage() {
+    var checklistCount = localStorage.getItem("checklistCount");
+    if (checklistCount) {
+      var checklistItems = localStorage.getItem("checklistItems_" + checklistCount);
+      if (checklistItems) {
+        checklistItems = JSON.parse(checklistItems);
+        var ul = document.getElementById("checklist3");
+        checklistItems.forEach(function(item) {
+          var li = document.createElement("li");
+          li.classList.add("checkbox");
+          var checkbox = document.createElement("input");
+          checkbox.type = "checkbox";
+          checkbox.id = "task" + (ul.getElementsByTagName("li").length + 1);
+          checkbox.name = "task" + (ul.getElementsByTagName("li").length + 1);
+          var label = document.createElement("label");
+          label.htmlFor = checkbox.id;
+          label.appendChild(document.createTextNode(item));
+          label.classList.add("checkbox-label");
+          var span = document.createElement("span");
+          span.classList.add("checkbox-custom");
+          label.prepend(span);
+          li.appendChild(checkbox);
+          li.appendChild(label);
+          ul.appendChild(li);
+        });
+      }
+    }
+  }
+
+</script> --}}
+
 </body>

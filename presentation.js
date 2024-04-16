@@ -19,12 +19,14 @@ app.get('/', (req, res) => {
 app.post('/', async (req, res) => {
   let username = req.body.username
   let password = req.body.password
-  let verifiedUser = await business.verifiedUser(username, password)
+  let verifiedUser = await business.verifyUser(username, password)
   if(verifiedUser) {
+    let sessionData = await business.startSession({data: username})
+    res.cookie('session', sessionData.sessionNumber, {expires: sessionData.expiry})
     res.redirect('/home')
   }
   else {
-    
+    res.send('Invalid Credentials')
   }
 })
 
@@ -35,23 +37,43 @@ app.get('/register', (req, res) => {
 app.post('/register', async (req, res) => {
   let username = req.body.username
   let password = req.body.password
-  await business.addUser(username, password)
+  let email = req.body.email
+  await business.addUser(username, password, email)
+  res.redirect('/login')
 })
 
-app.get('/home', (req, res) => {
-  res.render('home')
+app.get('/home', async (req, res) => {
+  let sessionData = await business.getSessionData(req.cookies.session)
+    if(sessionData) {
+        res.render('home')
+    }
+    else {
+        res.redirect('/')
+    }
 })
 
-app.get('/map', (req, res) => {
-  res.render('map')
+app.get('/map', async (req, res) => {
+  let sessionData = await business.getSessionData(req.cookies.session)
+    if(sessionData) {
+        res.render('map')
+    }
+    else {
+        res.redirect('/')
+    }
 })
 
 app.get('/map/:option', (req, res) => {
   res.render('map_food')
 })
 
-app.get('/checklist', (req, res) => {
-  res.render('checklist')
+app.get('/checklist', async (req, res) => {
+  let sessionData = await business.getSessionData(req.cookies.session)
+    if(sessionData) {
+        res.render('checklist')
+    }
+    else {
+        res.redirect('/')
+    }
 })
 
 app.get('/language', (req, res) => {
@@ -62,6 +84,25 @@ app.get('/profile', (req, res) => {
   res.render('profile')
 })
 
+app.get('/trips', async (req, res) => {
+  let sessionData = await business.getSessionData(req.cookies.session)
+    if(sessionData) {
+        res.render('trips')
+    }
+    else {
+        res.redirect('/')
+    }
+})
+
+app.get('/currency', async (req, res) => {
+  let sessionData = await business.getSessionData(req.cookies.session)
+    if(sessionData) {
+        res.render('currency')
+    }
+    else {
+        res.redirect('/')
+    }
+})
 
 app.get('/logout', async (req,res) => {
   await business.deleteSession(req.cookies.session)

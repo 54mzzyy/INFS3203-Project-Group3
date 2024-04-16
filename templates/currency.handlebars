@@ -1,0 +1,272 @@
+<!-- testinf perp -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!--Bootsrap 4 CDN-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        
+  <!--Fontawesome CDN-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+  <!--Custom styles-->
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+  <title>Currency Converter</title>
+  <style>
+            .containerCC{
+                padding: 100px;
+            }
+            .containerLogin{
+                padding-bottom: 100px;
+            }
+            .containerLogin .card{
+                border: none;
+                border-top: 5px solid  rgb(69,12,12);
+                background: #f3dbdb57;
+                color: #5d002e; 
+            }
+            .containerLogin p{
+                font-weight: 600;
+                font-size: 15px;
+                text-align: center;
+            }
+            .containerLogin .fab{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: none;
+                /*background: #f3dbdb57;*/
+                height: 40px;
+                width: 70px;
+            }
+            .containerLogin .fab:hover{
+                cursor: pointer;
+            }
+            .containerLogin .fa-twitter{
+                color: #56ABEC;
+            }
+            .containerLogin .fa-facebook{
+                color: #1775F1;
+            }
+            .containerLogin .fa-google{
+                color: #CB5048;
+            }
+            .containerLogin .division{
+                float: none;
+                position: relative;
+                margin: 30px auto 20px;
+                text-align: center;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .containerLogin .division .line{
+                border-top: 1.5px solid #57557A;;
+                position: absolute;
+                top: 13px;
+                width: 85%;
+            }
+            .containerLogin .line.l{
+                left: 52px;
+            }
+            .containerLogin .line.r{
+                right: 45px;
+
+            }
+            .containerLogin .division span{
+                font-weight: 600;
+                font-size: 14px;
+            }
+            .containerLogin .myform{
+                padding: 0 25px 0 33px;
+            }
+            .containerLogin .form-control{
+                border-top: 1px solid #5b2c2c;
+                border-radius: 10px;
+                background: #a94b4b7a;
+                margin-bottom: 20px;
+                letter-spacing: 1px;
+                padding: 10px 15px; 
+                color: #fff; 
+            }
+            .containerLogin .form-control:focus{
+                border: 1px solid #57557A;
+                border-radius: 3px;
+                box-shadow: 0 0 0 0.2rem rgba(169,75,75,0.25);
+                background: rgba(169,75,75,0.25);
+                color: #fff;
+                letter-spacing: 1px;
+            }
+            .containerLogin .bn{
+                /*text-decoration: underline;*/
+            }
+            .containerLogin .bn:hover{
+                cursor: pointer;
+            }
+            .containerLogin .form-check-input {
+                margin-top: 8px!important;
+                }
+            .containerLogin .btn-primary{
+                background: linear-gradient(135deg,  rgb(69 12 12) 39%, rgb(129 68 68) 101%);
+                border: none;
+                border-radius: 50px;
+            }
+            .containerLogin .btn-primary:focus{
+                box-shadow: none;
+                border: none;
+            }
+            .containerLogin small{
+                color: #F2CEFF;
+            }
+            .containerLogin .far.fa-user{
+                font-size: 13px;
+            }
+
+            @media(min-width: 767px){
+                .bn{
+                    text-align: right;
+                }
+            }
+            @media(max-width: 767px){
+                .form-check{
+                    text-align: center;
+                }
+                .bn{
+                    text-align: center;
+                    align-items: center;
+                }
+            }
+            @media(max-width: 450px){
+                .fab{
+                    width: 100%;
+                    height: 100%;
+                }
+                .division .line{
+                    width: 50%;
+                }
+            }
+            select {
+                    padding: 4px 10px;
+                    border: 1px solid #5b2c2c;
+                    border-radius: 2px;
+                    background-color: #ffffff;
+                    color: #000000;
+                    appearance: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                }
+
+                select:focus {
+                    border-color: #57557A;
+                    outline: none;
+                    background-color: rgba(169, 75, 75, 0.25);
+                }
+           
+        </style>
+</head>
+<body>
+{{!--   
+  <h1>Currency Converter</h1>
+  <div class="container">
+    <label for="amount">Amount:</label>
+  <input type="number" id="amount" placeholder="Enter amount">
+
+  <label for="fromCurrency">From:</label>
+  <select id="fromCurrency">
+    <option value="USD">USD</option>
+    <option value="EUR">EUR</option>
+    <option value="GBP">GBP</option>
+    <option value="QAR">QAR</option>
+    <!-- Add more currencies here -->
+  </select>
+
+  <label for="toCurrency">To:</label>
+  <select id="toCurrency">
+    <option value="USD">USD</option>
+    <option value="EUR">EUR</option>
+    <option value="GBP">GBP</option>
+    <option value="QAR">QAR</option>
+    <!-- Add more currencies here -->
+  </select>
+
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+  </div> --}}
+
+<div class="containerLogin" style="
+    padding-bottom: 190px;">
+  <div class="row d-flex justify-content-center mt-5">
+    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+      <div class="card py-3 px-2">
+        <p class="text-center mb-3 mt-2">Currency Converter</p>
+        <div class="divisionCC">
+
+        
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" placeholder="Enter amount" class="form-control">
+    
+        <label for="fromCurrency">From:</label>
+        <select id="fromCurrency">
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="GBP">GBP</option>
+          <option value="QAR">QAR</option>
+          <!-- Add more currencies here -->
+        </select>
+         
+        <label for="toCurrency">To:</label>
+        <select id="toCurrency">
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="GBP">GBP</option>
+          <option value="QAR">QAR</option>
+          <!-- Add more currencies here -->
+        </select>
+        </div>
+        <div class="form-group mt-3">   
+        <button onclick="convert()" class="btn btn-block btn-primary btn-lg"><small>Convert</small></button>
+        </div>
+        <p id="result"></p>
+
+         </div>
+         </div>     
+
+      </div>
+    </div>  
+</div>
+
+  <script>
+    // Define currency exchange rates
+    const exchangeRates = {
+      USD: 1,
+      EUR: 0.83,
+      GBP: 0.72,
+      QAR: 3.64,
+      JPY: 109.47,
+      AUD: 1.31,
+      CAD: 1.25,
+      CHF: 0.92
+    };
+
+    // Function to convert from one currency to another
+    function convert() {
+      const amount = parseFloat(document.getElementById('amount').value);
+      const fromCurrency = document.getElementById('fromCurrency').value;
+      const toCurrency = document.getElementById('toCurrency').value;
+
+      if (exchangeRates[fromCurrency] && exchangeRates[toCurrency]) {
+        const convertedAmount = (amount / exchangeRates[fromCurrency]) * exchangeRates[toCurrency];
+        document.getElementById('result').textContent = `${amount} ${fromCurrency} = ${convertedAmount.toFixed(2)} ${toCurrency}`;
+      } else {
+        document.getElementById('result').textContent = "Invalid currency";
+      }
+    }
+  </script>
+</body>
+
+</html>
