@@ -80,7 +80,14 @@ app.get('/language', (req, res) => {
   res.render('language')
 })
 
-app.get('/profile', (req, res) => {
+app.get('/profile', async (req, res) => {
+  let sessionData = await business.getSessionData(req.cookies.session)
+    if(sessionData) {
+        res.render('profile')
+    }
+    else {
+        res.redirect('/')
+    }
   res.render('profile')
 })
 
