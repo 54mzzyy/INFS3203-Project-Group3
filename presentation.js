@@ -85,8 +85,11 @@ app.get('/language', (req, res) => {
 
 app.get('/profile', async (req, res) => {
   let sessionData = await business.getSessionData(req.cookies.session)
+  let username = sessionData.data.username
+  let email = sessionData.data.email
     if(sessionData) {
-        res.render('profile')
+        res.render('profile', {username: username, email: email})
+
     }
     else {
         res.redirect('/')
