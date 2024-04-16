@@ -21,7 +21,10 @@ app.post('/', async (req, res) => {
   let password = req.body.password
   let verifiedUser = await business.verifyUser(username, password)
   if(verifiedUser) {
-    let sessionData = await business.startSession({data: username})
+    let userDetails = await business.getUserDetails(username)
+    let uname = userDetails.username
+    let email = userDetails.email
+    let sessionData = await business.startSession({data: userDetails, username: uname, email: email})
     res.cookie('session', sessionData.sessionNumber, {expires: sessionData.expiry})
     res.redirect('/home')
   }
@@ -80,7 +83,17 @@ app.get('/language', (req, res) => {
   res.render('language')
 })
 
-app.get('/profile', (req, res) => {
+app.get('/profile', async (req, res) => {
+  let sessionData = await business.getSessionData(req.cookies.session)
+  let username = sessionData.data.username
+  let email = sessionData.data.email
+    if(sessionData) {
+        res.render('profile', {username: username, email: email})
+
+    }
+    else {
+        res.redirect('/')
+    }
   res.render('profile')
 })
 
